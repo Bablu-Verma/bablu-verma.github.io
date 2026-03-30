@@ -181,27 +181,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-/* 
-// ── PROJECT HOVER IMAGE ───────────────────────
-const hoverImg = document.getElementById('proj-hover-img');
-const hoverSrc = document.getElementById('proj-hover-src');
 
-document.querySelectorAll('.project-item[data-img]').forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    hoverSrc.src = item.dataset.img;
-    hoverImg.classList.add('visible');
-  });
-  item.addEventListener('mouseleave', () => {
-    hoverImg.classList.remove('visible');
-  });
-  item.addEventListener('mousemove', (e) => {
-    const x = e.clientX + 24;
-    const y = e.clientY - 90;
-    hoverImg.style.left = x + 'px';
-    hoverImg.style.top = y + 'px';
-  });
-});
-*/
 
 
 async function handleFormSubmit(e) {
