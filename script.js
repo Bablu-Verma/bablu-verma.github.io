@@ -282,3 +282,64 @@ function initTyping() {
   }
   type();
 }
+
+// ── CASE STUDY MODAL LOGIC ────────────────────
+window.openCaseStudy = function(index) {
+  const allDetails = document.querySelectorAll('.project-details-data');
+  const targetData = allDetails[index];
+  const modal = document.getElementById('caseStudyModal');
+  const modalBody = document.getElementById('modalBody');
+  
+  if (targetData && modal && modalBody) {
+    modalBody.innerHTML = targetData.innerHTML;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent Scroll
+    
+    // Animate content reveal
+    gsap.from('#modalBody > *', {
+      opacity: 0,
+      y: 30,
+      stagger: 0.1,
+      duration: 0.6,
+      ease: 'power3.out'
+    });
+  }
+}
+
+window.closeCaseStudy = function() {
+  const modal = document.getElementById('caseStudyModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore Scroll
+  }
+}
+
+// ── FAQ ACCORDION LOGIC ───────────────────────
+document.querySelectorAll('.faq-item').forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+    
+    // Close other items
+    document.querySelectorAll('.faq-item').forEach(other => {
+      other.classList.remove('active');
+    });
+    
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  });
+});
+
+// ── TESTIMONIALS SLIDER NAVIGATION ────────────
+window.slideTestimonials = (direction) => {
+  const track = document.querySelector('.testimonials-track');
+  if (track) {
+    const scrollAmount = track.clientWidth * 0.8;
+    track.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+};
+

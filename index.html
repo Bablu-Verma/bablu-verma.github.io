@@ -17,6 +17,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -98,12 +99,7 @@
               </div>
               <a href="asset/bablu.dev.pdf" download="Bablu_Verma_Resume" class="hero-availability resume-btn"
                 style="display:inline-flex; background:var(--charcoal); color:var(--paper); border-color:var(--charcoal); margin-left:1rem;">
-                <svg style="margin-right:8px; vertical-align:middle" width="14" height="14" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
+                <i class="fas fa-file-download" style="margin-right:8px;"></i>
                 Resume
               </a>
             </div>
@@ -162,22 +158,41 @@
     </div>
   </section>
 
-  <!-- MARQUEE (Advanced Design) -->
   <section class="marquee-advanced">
     <div class="marquee-row marquee-to-left">
       <div class="marquee-content">
-        <span>React</span><span>Next.js</span><span>Node.js</span><span>TypeScript</span><span>GSAP</span><span>Tailwind</span><span>Three.js</span><span>AWS</span><span>Docker</span><span>MongoDB</span>
-        <span>React</span><span>Next.js</span><span>Node.js</span><span>TypeScript</span><span>GSAP</span><span>Tailwind</span><span>Three.js</span><span>AWS</span><span>Docker</span><span>MongoDB</span>
+        <span><i class="fab fa-react" style="margin-right:12px; color:var(--accent)"></i>React</span>
+        <span><i class="fab fa-js" style="margin-right:12px; color:var(--accent)"></i>Next.js</span>
+        <span><i class="fab fa-node-js" style="margin-right:12px; color:var(--accent)"></i>Node.js</span>
+        <span><i class="fas fa-code" style="margin-right:12px; color:var(--accent)"></i>TypeScript</span>
+        <span><i class="fas fa-bolt" style="margin-right:12px; color:var(--accent)"></i>GSAP</span>
+        <span><i class="fab fa-css3-alt" style="margin-right:12px; color:var(--accent)"></i>Tailwind</span>
+
+        <span><i class="fab fa-react" style="margin-right:12px; color:var(--accent)"></i>React</span>
+        <span><i class="fab fa-js" style="margin-right:12px; color:var(--accent)"></i>Next.js</span>
+        <span><i class="fab fa-node-js" style="margin-right:12px; color:var(--accent)"></i>Node.js</span>
+        <span><i class="fas fa-code" style="margin-right:12px; color:var(--accent)"></i>TypeScript</span>
+        <span><i class="fas fa-bolt" style="margin-right:12px; color:var(--accent)"></i>GSAP</span>
+        <span><i class="fab fa-css3-alt" style="margin-right:12px; color:var(--accent)"></i>Tailwind</span>
       </div>
+    </div>
+    </div>
     </div>
     <div class="marquee-row marquee-to-right">
       <div class="marquee-content">
-        <span>System Architecture</span><span>Backend Logic</span><span>Frontend Magic</span><span>Clean
-          Code</span><span>Scalability</span><span>Performance</span><span>Responsive</span><span>Mobile
-          First</span><span>Accessibility</span>
-        <span>System Architecture</span><span>Backend Logic</span><span>Frontend Magic</span><span>Clean
-          Code</span><span>Scalability</span><span>Performance</span><span>Responsive</span><span>Mobile
-          First</span><span>Accessibility</span>
+        <span><i class="fas fa-layer-group" style="margin-right:12px; color:var(--accent)"></i>Architecture</span>
+        <span><i class="fas fa-server" style="margin-right:12px; color:var(--accent)"></i>Backend</span>
+        <span><i class="fas fa-laptop-code" style="margin-right:12px; color:var(--accent)"></i>Frontend</span>
+        <span><i class="fas fa-expand-arrows-alt" style="margin-right:12px; color:var(--accent)"></i>Scalability</span>
+        <span><i class="fas fa-gauge-high" style="margin-right:12px; color:var(--accent)"></i>Performance</span>
+        <span><i class="fas fa-mobile-alt" style="margin-right:12px; color:var(--accent)"></i>Mobile</span>
+
+        <span><i class="fas fa-layer-group" style="margin-right:12px; color:var(--accent)"></i>Architecture</span>
+        <span><i class="fas fa-server" style="margin-right:12px; color:var(--accent)"></i>Backend</span>
+        <span><i class="fas fa-laptop-code" style="margin-right:12px; color:var(--accent)"></i>Frontend</span>
+        <span><i class="fas fa-expand-arrows-alt" style="margin-right:12px; color:var(--accent)"></i>Scalability</span>
+        <span><i class="fas fa-gauge-high" style="margin-right:12px; color:var(--accent)"></i>Performance</span>
+        <span><i class="fas fa-mobile-alt" style="margin-right:12px; color:var(--accent)"></i>Mobile</span>
       </div>
     </div>
   </section>
@@ -419,10 +434,37 @@
           <span class="tech-badge">TypeScript</span>
           <span class="tech-badge">Tailwind CSS</span>
         </div>
-        <a href="https://woost.io/" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14"
-            fill="none">
-            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
-          </svg></a>
+        <div class="project-actions">
+          <a href="https://woost.io/" target="_blank" class="project-link">Live View <svg width="14" height="14"
+              viewBox="0 0 14 14" fill="none">
+              <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+            </svg></a>
+          <button class="project-case-study" onclick="openCaseStudy(0)">Case Study</button>
+        </div>
+        <!-- PROJECT HIDDEN DETAILS -->
+        <div class="project-details-data hidden">
+          <div class="cs-header">
+            <h3>Woost.io</h3>
+            <p>Freelancing & Collaboration Ecosystem</p>
+          </div>
+          <div class="cs-body">
+            <div class="cs-section">
+              <span class="cs-label">Challenge</span>
+              <p>Building a real-time collaboration environment that could handle multiple users editing and
+                communicating simultaneously without sync lag.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Solution</span>
+              <p>Implemented a robust Socket.io infrastructure for live triggers and a Redux state management system to
+                ensure UI consistency across web and mobile platforms.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Impact</span>
+              <p>Delivered a seamless UX that reduced project coordination time by 40%. Scaled to support thousands of
+                active freelancers.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="project-item reveal"
@@ -445,10 +487,36 @@
           <span class="tech-badge">SEO</span>
           <span class="tech-badge">Tailwind CSS</span>
         </div>
-        <a href="https://freekaamaal.com/" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14"
-            fill="none">
-            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
-          </svg></a>
+        <div class="project-actions">
+          <a href="https://freekaamaal.com/" target="_blank" class="project-link">Live View <svg width="14" height="14"
+              viewBox="0 0 14 14" fill="none">
+              <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+            </svg></a>
+          <button class="project-case-study" onclick="openCaseStudy(1)">Case Study</button>
+        </div>
+        <div class="project-details-data hidden">
+          <div class="cs-header">
+            <h3>Freekaamaal</h3>
+            <p>India's Leading Cashback Platform</p>
+          </div>
+          <div class="cs-body">
+            <div class="cs-section">
+              <span class="cs-label">Challenge</span>
+              <p>Managing high-traffic surges during festive sales while maintaining fast page load times for SEO
+                ranking.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Solution</span>
+              <p>Leveraged Next.js Server Side Rendering (SSR) and incremental static regeneration (ISR) to serve fast,
+                SEO-friendly content. Optimized image delivery and code splitting.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Impact</span>
+              <p>Achieved a 90+ Lighthouse score and increased organic traffic by 25% within the first six months of
+                deployment.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="project-item reveal"
@@ -475,10 +543,35 @@
           <span class="tech-badge">SEO</span>
           <span class="tech-badge">Tailwind CSS</span>
         </div>
-        <a href="https://bachatjar.com" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14"
-            fill="none">
-            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
-          </svg></a>
+        <div class="project-actions">
+          <a href="https://bachatjar.com" target="_blank" class="project-link">Live View <svg width="14" height="14"
+              viewBox="0 0 14 14" fill="none">
+              <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+            </svg></a>
+          <button class="project-case-study" onclick="openCaseStudy(2)">Case Study</button>
+        </div>
+        <div class="project-details-data hidden">
+          <div class="cs-header">
+            <h3>BachatJar</h3>
+            <p>Deals & Discount Aggregator</p>
+          </div>
+          <div class="cs-body">
+            <div class="cs-section">
+              <span class="cs-label">Challenge</span>
+              <p>Efficiently fetching and scraping coupon data from multiple vendors without blocking the main event
+                loop.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Solution</span>
+              <p>Built a Node.js microservice handler with Redis caching to store frequently accessed data, reducing API
+                latency significantly.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Impact</span>
+              <p>Reduced server response time from 1.2s to 200ms, leading to a much better mobile user experience.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="project-item reveal"
@@ -504,10 +597,36 @@
           <span class="tech-badge">Optimization</span>
           <span class="tech-badge">SEO</span>
         </div>
-        <a href="https://www.gaurastra.com" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14"
-            fill="none">
-            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
-          </svg></a>
+        <div class="project-actions">
+          <a href="https://www.gaurastra.com" target="_blank" class="project-link">Live View <svg width="14" height="14"
+              viewBox="0 0 14 14" fill="none">
+              <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+            </svg></a>
+          <button class="project-case-study" onclick="openCaseStudy(3)">Case Study</button>
+        </div>
+        <div class="project-details-data hidden">
+          <div class="cs-header">
+            <h3>Gaurastra</h3>
+            <p>Modern Ayurvedic E-commerce</p>
+          </div>
+          <div class="cs-body">
+            <div class="cs-section">
+              <span class="cs-label">Challenge</span>
+              <p>Implementing a secure and reliable payment flow that handles failed transactions gracefully with
+                automated reversals.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Solution</span>
+              <p>Integrated PhonePe PG with custom webhook handling for real-time status updates and automated order
+                reconciliation.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Impact</span>
+              <p>Processed over 5,000+ orders successfully with a 99.9% payment success rate, improving customer trust.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="project-item reveal"
@@ -531,10 +650,34 @@
           <span class="tech-badge">TypeScript</span>
           <span class="tech-badge">Deployment</span>
         </div>
-        <a href="https://test.gaurastra.com/offline/login" class="project-link">View <svg width="14" height="14"
-            viewBox="0 0 14 14" fill="none">
-            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
-          </svg></a>
+        <div class="project-actions">
+          <a href="https://test.gaurastra.com/offline/login" target="_blank" class="project-link">Live View <svg
+              width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+            </svg></a>
+          <button class="project-case-study" onclick="openCaseStudy(4)">Case Study</button>
+        </div>
+        <div class="project-details-data hidden">
+          <div class="cs-header">
+            <h3>POS System</h3>
+            <p>Smart Retail Billing solution</p>
+          </div>
+          <div class="cs-body">
+            <div class="cs-section">
+              <span class="cs-label">Challenge</span>
+              <p>Ensuring the billing process continues even if the internet connection is unstable or lost.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Solution</span>
+              <p>Engineered an offline-first architecture using PWA features and local storage syncing that updates the
+                master database once connection is restored.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Impact</span>
+              <p>Enabled retail stores to run uninterrupted operations, eliminating downtime-related revenue loss.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="project-item reveal"
@@ -558,10 +701,34 @@
           <span class="tech-badge">javascript</span>
           <span class="tech-badge">Deployment</span>
         </div>
-        <a href="http://strategyclasses.in/" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14"
-            fill="none">
-            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
-          </svg></a>
+        <div class="project-actions">
+          <a href="http://strategyclasses.in/" target="_blank" class="project-link">Live View <svg width="14"
+              height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+            </svg></a>
+          <button class="project-case-study" onclick="openCaseStudy(5)">Case Study</button>
+        </div>
+        <div class="project-details-data hidden">
+          <div class="cs-header">
+            <h3>Strategy Classes</h3>
+            <p>Comprehensive Learning Management System</p>
+          </div>
+          <div class="cs-body">
+            <div class="cs-section">
+              <span class="cs-label">Challenge</span>
+              <p>Handling thousands of concurrent students taking online exams without crashing the server.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Solution</span>
+              <p>Optimized SQL queries and implemented load balancing with Nginx to distribute traffic across multiple
+                Node.js instances.</p>
+            </div>
+            <div class="cs-section">
+              <span class="cs-label">Impact</span>
+              <p>Supported over 10k+ active users during peak exam hours with zero reported downtime.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -842,6 +1009,214 @@
 
   </section>
 
+  <section id="testimonials">
+    <div class="section-label reveal">Endorsements</div>
+    <h2 class="testimonials-title reveal">Kind Words<br><em>from Clients</em></h2>
+
+    <div class="testimonials-slider-wrap reveal">
+      <div class="testimonials-track">
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">
+            Bablu transformed our complex ecommerce requirements into a seamless, high-performing reality. His expertise
+            in Node.js and real-time systems is unparalleled.
+          </p>
+          <div class="testimonial-footer">
+            <div class="testimonial-info">
+              <span class="testimonial-name">Ravi kumar</span>
+              <span class="testimonial-role">Founder, Freekaamaal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">
+            Exceptional attention to detail and a true partner in development. The POS system he built for us has
+            revolutionized our offline operations.
+          </p>
+          <div class="testimonial-footer">
+            <div class="testimonial-info">
+              <span class="testimonial-name">Aayush</span>
+              <span class="testimonial-role">CTO, 4tuners Tech</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">
+            Working with Bablu was a breeze. He understands business goals as much as technical constraints. Highly
+            recommended for any serious web project.
+          </p>
+          <div class="testimonial-footer">
+            <div class="testimonial-info">
+              <span class="testimonial-name">Sanjay</span>
+              <span class="testimonial-role">Director, Strategy Classes</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="testimonials-nav">
+        <button class="t-nav-btn prev" onclick="slideTestimonials(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="t-nav-btn next" onclick="slideTestimonials(1)"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="faq-header">
+      <div class="section-label reveal">Got Questions?</div>
+      <h2 class="faq-title reveal">Common<br><em>Inquiries</em></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <span>What is your typical project timeline?</span>
+          <div class="faq-icon-wrap">
+            <div class="faq-icon"></div>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>Typically, a web project takes 3 to 6 weeks, and mobile apps can take 6 to 10 weeks depending on the
+            complexity, features, and integrations required.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <span>How do you handle project communication?</span>
+          <div class="faq-icon-wrap">
+            <div class="faq-icon"></div>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>I use tools like Slack/WhatsApp for quick chats, Jira/Trello for task tracking, and weekly video calls to
+            ensure we're always aligned on the project goals.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <span>Do you help with app store & cloud deployment?</span>
+          <div class="faq-icon-wrap">
+            <div class="faq-icon"></div>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, I handle the entire lifecycle — from coding and testing to deploying on AWS, Vercel, Google Play
+            Store, and Apple App Store.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <span>What tech stack do you recommend for startups?</span>
+          <div class="faq-icon-wrap">
+            <div class="faq-icon"></div>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>For most startups, I recommend the MERN (MongoDB, Express, React, Node) stack or Next.js. It's fast,
+            scalable, and has a huge developer ecosystem for future growth.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <span>How do you ensure post-launch support?</span>
+          <div class="faq-icon-wrap">
+            <div class="faq-icon"></div>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>I provide 3 to 6 months of active maintenance support after the launch to ensure everything runs smoothly
+            and to address any minor adjustments needed.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <span>Do you offer custom designs or use templates?</span>
+          <div class="faq-icon-wrap">
+            <div class="faq-icon"></div>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>I build every project from scratch using custom code. This ensures your website or app is unique, matches
+            your brand identity perfectly, and performs significantly better than generic templates.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <span>Is my website/app going to be mobile-friendly?</span>
+          <div class="faq-icon-wrap">
+            <div class="faq-icon"></div>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely. In today's world, mobile-first design is a priority. Your project will be fully responsive and
+            tested across all major devices and screen sizes to ensure a flawless user experience.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <span>Can you help with SEO and Google ranking?</span>
+          <div class="faq-icon-wrap">
+            <div class="faq-icon"></div>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, all my web projects follow SEO best practices, including fast loading speeds, clean semantic HTML,
+            schema markup, and meta tag optimization to help you rank better on search engines.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <span>What if I need changes after the project is complete?</span>
+          <div class="faq-icon-wrap">
+            <div class="faq-icon"></div>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>I offer flexible maintenance and update plans. whether it's a small tweak or a major new feature, I'm
+            available for long-term collaboration to keep your product evolving with your business.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <span>Do you sign NDAs (Non-Disclosure Agreements)?</span>
+          <div class="faq-icon-wrap">
+            <div class="faq-icon"></div>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, client confidentiality is a top priority. I am happy to sign an NDA before we discuss any sensitive
+            project details or business strategies to ensure your intellectual property is protected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY MODAL -->
+  <div id="caseStudyModal">
+    <div class="modal-overlay" onclick="closeCaseStudy()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeCaseStudy()">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+
+
   <section id="terminal-section">
     <div class="terminal-inner">
       <div class="terminal-text-side">
@@ -876,6 +1251,21 @@
     </div>
   </section>
 
+  <section id="big-cta">
+    <div class="cta-inner">
+      <div class="cta-content">
+        <div class="section-label reveal">Next Step</div>
+        <h2 class="cta-title reveal">Have a project in mind?<br>Let's turn your idea into <em>reality.</em></h2>
+        <a href="#contact" class="cta-btn reveal"
+          style="padding: 24px 60px; background: var(--accent); color: var(--paper); display: inline-block; text-decoration: none; font-family: var(--font-mono); margin-top: 2rem;">Let's
+          Talk →</a>
+      </div>
+      <div class="cta-visual reveal">
+        <div class="cta-orb"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact">
     <div class="contact-inner">
@@ -892,40 +1282,44 @@
         </p>
         <div class="contact-links reveal">
           <a href="mailto:jbabluverma@gmail.com" class="contact-link">
-            <div>
-              <div class="contact-link-name">Email</div>
-              <div class="contact-link-handle">jbabluverma@gmail.com</div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <i class="fas fa-envelope" style="font-size: 20px; color: var(--accent);"></i>
+              <div>
+                <div class="contact-link-name">Email</div>
+                <div class="contact-link-handle">jbabluverma@gmail.com</div>
+              </div>
             </div>
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
-            </svg>
+            <i class="fas fa-arrow-right" style="font-size: 14px; opacity: 0.5;"></i>
           </a>
           <a href="https://github.com/bablu-verma" target="_blank" class="contact-link">
-            <div>
-              <div class="contact-link-name">GitHub</div>
-              <div class="contact-link-handle">github.com/bablu-verma</div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <i class="fab fa-github" style="font-size: 20px; color: var(--accent);"></i>
+              <div>
+                <div class="contact-link-name">GitHub</div>
+                <div class="contact-link-handle">github.com/bablu-verma</div>
+              </div>
             </div>
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
-            </svg>
+            <i class="fas fa-arrow-right" style="font-size: 14px; opacity: 0.5;"></i>
           </a>
           <a href="https://linkedin.com/in/babluverma" target="_blank" class="contact-link">
-            <div>
-              <div class="contact-link-name">LinkedIn</div>
-              <div class="contact-link-handle">linkedin.com/in/babluverma</div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <i class="fab fa-linkedin" style="font-size: 20px; color: var(--accent);"></i>
+              <div>
+                <div class="contact-link-name">LinkedIn</div>
+                <div class="contact-link-handle">linkedin.com/in/babluverma</div>
+              </div>
             </div>
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
-            </svg>
+            <i class="fas fa-arrow-right" style="font-size: 14px; opacity: 0.5;"></i>
           </a>
           <a href="https://www.instagram.com/ro.han_verma/" target="_blank" class="contact-link">
-            <div>
-              <div class="contact-link-name">Instagram</div>
-              <div class="contact-link-handle">instagram.com/ro.han_verma</div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <i class="fab fa-instagram" style="font-size: 20px; color: var(--accent);"></i>
+              <div>
+                <div class="contact-link-name">Instagram</div>
+                <div class="contact-link-handle">instagram.com/ro.han_verma</div>
+              </div>
             </div>
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
-            </svg>
+            <i class="fas fa-arrow-right" style="font-size: 14px; opacity: 0.5;"></i>
           </a>
 
         </div>
