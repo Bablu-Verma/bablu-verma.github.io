@@ -153,6 +153,19 @@ function initAnimations() {
       nav.style.boxShadow = self.progress > 0 ? '0 4px 40px rgba(0,0,0,0.06)' : 'none';
     }
   });
+
+  // Terminal Sequential Reveal
+  gsap.from('#terminalGrid > div', {
+    opacity: 0,
+    x: -20,
+    stagger: 0.5,
+    duration: 0.5,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '#terminal-section',
+      start: 'top 70%'
+    }
+  });
 }
 
 // ── GALLERY FILTER ────────────────────────────
@@ -189,67 +202,6 @@ document.querySelectorAll('.project-item[data-img]').forEach(item => {
   });
 });
 */
-
-async function fetchGitHubData() {
-  const username = 'Bablu-Verma'; // Use the official username found online
-  const grid = document.getElementById('contribGrid');
-  const stats = {
-    repos: document.getElementById('ghRepos'),
-    stars: document.getElementById('ghStars'),
-    followers: document.getElementById('ghFollowers'),
-    contribs: document.getElementById('ghContribs')
-  };
-
-  try {
-    
-    const userRes = await fetch(`https://api.github.com/users/${username}`);
-    if (!userRes.ok) throw new Error("GitHub user API failed");
-    const userData = await userRes.json();
-
-    stats.repos.textContent = userData.public_repos || 0;
-    stats.followers.textContent = userData.followers || 0;
-
-    
-    const reposRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`);
-    if (reposRes.ok) {
-      const repos = await reposRes.json();
-      if (Array.isArray(repos)) {
-        const stars = repos.reduce((acc, repo) => acc + repo.stargazers_count, 0);
-        stats.stars.textContent = stars;
-      }
-    }
-
-   
-    const contribRes = await fetch(`https://github-contributions-api.jogruber.de/v4/${username}?y=2024&y=2025`);
-    if (!contribRes.ok) throw new Error("Contributions API failed");
-    const contribData = await contribRes.json();
-
-    if (contribData && contribData.contributions) {
-      // Calculate total contributions for current year (or total)
-      const totalNum = contribData.total && contribData.total.total ? contribData.total.total : 
-                       contribData.contributions.reduce((acc, day) => acc + day.count, 0);
-      
-      stats.contribs.textContent = `${totalNum}+`;
-    } else {
-      throw new Error("No contribution data structure");
-    }
-
-  } catch (err) {
-    console.error("GITHUB FETCH ERROR:", err);
-    // Silent fail placeholders (already show —)
-    grid.innerHTML = '<div class="grid-error">Activity data currently unavailable.</div>';
-    
-    // Set some realistic placeholders if we can't fetch
-    if(stats.repos.textContent === "—") stats.repos.textContent = "15+";
-    if(stats.stars.textContent === "—") stats.stars.textContent = "50+";
-    if(stats.followers.textContent === "—") stats.followers.textContent = "20+";
-    if(stats.contribs.textContent === "—") stats.contribs.textContent = "500+";
-  }
-}
-
-
-
-fetchGitHubData();
 
 
 async function handleFormSubmit(e) {
@@ -320,7 +272,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 // ── TYPING EFFECT ─────────────────────────────
 function initTyping() {
-  const words = ["Full Stack Developer", "Mobile App Expert", "UI/UX Enthusiast", "Creative Technologist"];
+  const words = ["Full Stack Developer", "Mobile App Expert", "Backend Architect", "System Engineer"];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
