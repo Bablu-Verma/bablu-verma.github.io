@@ -1,1482 +1,885 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
-
-    <title>Bablu Verma - Software Engineer in Noida</title>
-    <meta name="description" content="Jayden">
-
-    <meta name="keywords" content="">
-    <meta name="author" content="bablu verma">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
-
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="css/odometer.min.css">
-    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
-
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
-
-    <link rel="stylesheet" href="css/fonts.css">
-
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <link rel="shortcut icon" href="images/b_logo.png">
-    <link rel="apple-touch-icon-precomposed" href="images/b_logo.png">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bablu.dev | Software Engineer in Noida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="author" content="bablu verma">
+  <link rel="shortcut icon" href="asset/b_logo.png">
+  <link rel="apple-touch-icon-precomposed" href="asset/b_logo.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,300;0,9..144,400;1,9..144,300&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="counter-scroll">
+<body>
 
-    <div id="wrapper">
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-name" id="loader-name">Bablu Verma<span style="color:var(--accent)">.</span></div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+    <div class="loader-counter" id="loader-counter">000</div>
+  </div>
 
-        <video class="body-overlay" muted="" autoplay="" loop="" playsinline="">
-            <source src="media/video4.mp4" type="video/mp4">
-        </video>
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-outline"></div>
 
-        <div class="tf-btn-menu">
-            <img src="images/dashboard.svg" alt="">
+  <!-- PROJECT HOVER IMAGE -->
+  <div id="proj-hover-img"><img src="" alt="" id="proj-hover-src" /></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">BV<span>.</span>dev</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:[EMAIL_ADDRESS]" class="nav-cta">Hire Me</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#services" onclick="closeMobileMenu()">Services</a>
+    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+    <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <a href="mailto:[EMAIL_ADDRESS]">Hire Me →</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-number" aria-hidden="true">01</div>
+
+    <div class="hero-main">
+      <div class="hero-left">
+        <div class="hero-index reveal">
+          <div class="index-line"></div>
+          <span class="typing-text">Full Stack Developer</span><span class="type-cursor">|</span>
         </div>
 
-        <div class="tf-sidebar-menu tf-canvas">
-            <div class="overlay"></div>
-            <div class="sidebar-menu-inner">
-                <div class="sidebar-wrap">
-                    <div class="sidebar-heading">
-                        <div class="heading text-body-1 dot-before">Menu</div>
-                        <span class="close-canvas">
-                            <i class="icon icon-times-solid"></i>
-                        </span>
-                    </div>
-                    <ul class="sidebar-nav nav-scroll">
-                        <li>
-                            <a class="scroll-to active" href="#home">
-                                <i class="icon icon-home-solid"></i><span class="text-body-2">Home</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="scroll-to" href="#about">
-                                <i class="icon icon-user-solid"></i><span class="text-body-2">About</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="scroll-to" href="#experience">
-                                <i class="icon icon-toolbox-solid"></i><span class="text-body-2">Experience</span>
-                            </a>
-                        </li>
-                         <li>
-                            <a class="scroll-to" href="#services">
-                                <i class="icon icon-stream-solid"></i><span class="text-body-2">Services</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="scroll-to" href="#works">
-                                <i class="icon icon-tasks-solid"></i><span class="text-body-2">Selected Works</span>
-                            </a>
-                        </li>
-                       
- <li>
-                            <a class="scroll-to" href="#pricing">
-                                <i class="icon icon-tags-solid"></i><span class="text-body-2">Pricing</span>
-                            </a>
-                        </li>
+        <h1 class="hero-title">
+          <div class="overflow-hidden"><span class="title-line block">Bablu</span></div>
+          <div class="overflow-hidden"><span class="title-line block">Verma </div>
 
+        </h1>
 
-                       
-                        <li>
-                            <a class="scroll-to" href="#faqs">
-                                <i class="icon icon-comment-alt-solid"></i><span class="text-body-2">FAQs</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="scroll-to" href="#contact">
-                                <i class="icon icon-envelope-solid"></i><span class="text-body-2">Contact</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="sidebar-social">
-                    <div class="heading text-body-1 dot-before">Social Network</div>
-                    <ul class="social-links">
-
-                        <li>
-                            <a target="_blank" href="https://github.com/Bablu-Verma/"><i
-                                    class="icon icon-github"></i></a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="https://www.linkedin.com/in/babluverma/"><i
-                                    class="icon icon-linkedin-in"></i></a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="https://www.instagram.com/ro.han_verma/"><i
-                                    class="icon icon-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="./asset/resume.pdf"><i class="icon icon-download-solid"></i></a>
-                        </li>
-
-                    </ul>
-                </div>
+        <div class="hero-bottom reveal">
+          <div>
+            <div class="hero-desc">
+              Building scalable web & mobile apps<br>
+              using modern technologies like<br>
+              <strong style="color:var(--charcoal)">React, Node & AI integrations.</strong>
             </div>
+            <div class="flex gap-2" style="margin-top: 1.5rem;">
+              <div class="hero-availability" style=" display:inline-flex;">
+                <div class="hero-dot"></div>
+                Available for freelance projects
+              </div>
+              <a href="asset/bablu.dev.pdf" download="Bablu_Verma_Resume" class="hero-availability resume-btn"
+                style="display:inline-flex; background:var(--charcoal); color:var(--paper); border-color:var(--charcoal); margin-left:1rem;">
+                <svg style="margin-right:8px; vertical-align:middle" width="14" height="14" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Resume
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <ul class="right-nav nav-scroll">
-            <li>
-                <a class="scroll-to active" href="#home">
-                    <i class="icon icon-home-solid"></i>
-                    <span class="tooltip text-body-3">Home</span>
-                </a>
-            </li>
-             <li>
-                <a class="scroll-to" href="#about">
-                    <i class="icon icon-user-solid"></i>
-                    <span class="tooltip text-body-3">About</span>
-                </a>
-            </li>
-             <li>
-                <a class="scroll-to" href="#services">
-                    <i class="icon icon-stream-solid"></i>
-                    <span class="tooltip text-body-3">Services</span>
-                </a>
-            </li>
-            <li>
-                <a class="scroll-to" href="#works">
-                    <i class="icon icon-tasks-solid"></i>
-                    <span class="tooltip text-body-3">Works</span>
-                </a>
-            </li>
-           
-           
-
-            <li>
-                <a class="scroll-to" href="#pricing">
-                    <i class="icon icon-tags-solid"></i>
-                    <span class="tooltip text-body-3">Pricing</span>
-                </a>
-            </li>
-            <li>
-                <a class="scroll-to" href="#faqs">
-                    <i class="icon icon-comment-alt-solid"></i>
-                    <span class="tooltip text-body-3">FAQs</span>
-                </a>
-            </li>
-            <li>
-                <a class="scroll-to" href="#contact">
-                    <i class="icon icon-envelope-solid"></i>
-                    <span class="tooltip text-body-3">Contact</span>
-                </a>
-            </li>
-        </ul>
-
-
-
-        <div class="left-sidebar">
-            <div class="heading">
-                <img src="images/b_logo.png" style="max-width: 30px;" alt="">
-                <div class="box-status">
-                    <div class="dot"></div>
-                    <div class="text-body-1">Available for <span class="number">5 projects</span></div>
-                </div>
+      <div class="hero-right">
+        <div class="hero-visual-container">
+          <div class="hero-glass-card g-1">
+            <div class="card-icon">🚀</div>
+            <div class="card-info">
+              <span class="card-label">Projects Delivered</span>
+              <span class="card-val">20+ Live Builds</span>
             </div>
-            <div class="image">
-                <div class="avatar avatar-wrap">
-                    <img class="avatar-bg" src="images/bablu_photo.jpg" alt="">
-                    <img class=" avatar-no-bg" style="display: none;" src="images/bablu_photo.jpg" alt="">
-                </div>
-                <img class=" signature" src="images/signature.png" data-src="images/section/signature.png" alt="">
+          </div>
 
+          <div class="hero-glass-card g-2">
+            <div class="card-icon">🎯</div>
+            <div class="card-info">
+              <span class="card-label">User Experience</span>
+              <span class="card-val">Clean • Fast </span>
             </div>
-            <div class="infor">
-                <h6 class="mail letter-spacing-0">Software Engineer</h6>
-                <div class="text-body-2 address">Based in Noida, India - 201307 </div>
-            </div>
-            <ul class="social-links justify-content-center">
+          </div>
 
-                <li>
-                    <a target="_blank" href="https://github.com/Bablu-Verma/"><i class="icon icon-github"></i></a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://www.linkedin.com/in/babluverma/"><i
-                            class="icon icon-linkedin-in"></i></a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://www.instagram.com/ro.han_verma/"><i
-                            class="icon icon-instagram"></i></a>
-                </li>
-                <li>
-                    <a target="_blank" href="./asset/resume.pdf"><i class="icon icon-download-solid"></i></a>
-                </li>
-            </ul>
-            <a href="#contact" class="bot-button">
-                <div class="text-body-1 text">Get Started</div>
-                <i class="icon icon-arrow-top-right"></i>
-            </a>
+          <div class="hero-glass-card g-3">
+            <div class="card-icon">💻</div>
+            <div class="card-info">
+              <span class="card-label">Tech Stack</span>
+              <span class="card-val">React • JS • Node</span>
+            </div>
+          </div>
+
+          <div class="hero-img-wrap">
+            <div class="hero-img-glow"></div>
+            <div class="hero-img-frame"></div>
+            <!-- <div class="hero-abstract-shapes">
+              <div class="shape s-1"></div>
+              <div class="shape s-2"></div>
+              <div class="shape s-3"></div>
+            </div> -->
+            <div class="hero-code-badge">
+              <span>&lt;code&gt;</span>
+              <span>npm install passion</span>
+            </div>
+          </div>
         </div>
-
-        <div class="main-content relative">
-
-            <section class="section-hero" id="home">
-                <div class="tf-container">
-                    <div class="row">
-                        <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                            <div class="icon-gradient"></div>
-                            <div class="text-body-1 infor split-text split-lines-transform">Noida India, Software
-                                Engineer
-                            </div>
-                            <div class="main-title">
-                                <div class="text-body-1 dot-before subtitle">Introduction</div>
-                                <h1 class="title split-text effect-right">Transforming Ideas Into Code <br> And Dreams
-                                    Into Reality
-                                </h1>
-                                <div class="text-body-2 text">I'm Bablu Verma a passionate Software Engineer crafting
-                                    clean,
-                                    scalable, and <br> impactful digital solutions.</div>
-                            </div>
-                            <div class="indicators">
-                                <ul class="list-tags">
-                                    <li><a class="text-body-2 wow fadeInUp" href="#">Software</a></li>
-                                    <li><a class="text-body-2 wow fadeInUp" data-wow-delay="0.1s" href="#">
-                                            Web App</a></li>
-                                    <li><a class="text-body-2 wow fadeInUp" data-wow-delay="0.2s"
-                                            href="#">Application</a>
-                                    </li>
-                                    <li><a class="text-body-2 wow fadeInUp" href="#">API's</a></li>
-                                    <li><a class="text-body-2 wow fadeInUp" href="#">Back-end</a></li>
-                                </ul>
-                                <div class="indicators-wrap">
-                                    <!-- Projects Completed -->
-                                    <div class="indicators-item wow fadeInUp">
-                                        <div class="text-body-1 dot-before indicators-title">Projects Completed</div>
-                                        <div class="wg-counter style-1">
-                                            <div class="flex align-items-center justify-content-end">
-                                                <div class="odometer text-display-2" data-number="10">0</div>
-                                                <span class="sub-odo text-display-2">+</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Success Rate -->
-                                    <div class="indicators-item type-1 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="text-body-1 dot-before indicators-title">Client Success Rate</div>
-                                        <div class="wg-counter style-1">
-                                            <div class="flex align-items-center justify-content-end">
-                                                <div class="odometer text-display-2" data-number="98">0</div>
-                                                <span class="sub-odo text-display-2">%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="indicators-item type-1 wow fadeInUp" data-wow-delay="0.2s">
-                                        <div class="text-body-1 dot-before indicators-title">Years of Experience</div>
-                                        <div class="wg-counter style-1">
-                                            <div class="flex align-items-center justify-content-end">
-                                                <div class="odometer text-display-2" data-number="3">0</div>
-                                                <span class="sub-odo text-display-2">+</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="wrapper-content relative overflow-hidden">
-
-                <section class="section-about" id="about">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="heading">
-                                    <div class="text-body-2 dot-before subtitle fw-medium">About Me</div>
-                                    <div>
-                                        <h2 class="fw-medium title text-color-change">
-                                            Behind Every Great Product Is Clean, Thoughtful Code
-                                        </h2>
-                                        <div class="text-body-2 text">
-                                            I’m Bablu Verma a passionate Software Engineer with a focus on building scalable web and
-                                            mobile applications using modern technologies like React, React Native, and
-                                            Node.js. For me, it's not just about writing code — it's about solving
-                                            real-world problems, creating smooth user experiences, and continuously
-                                            learning and evolving with the tech ecosystem.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="box-playground">
-                                    <div class="top">
-                                        <div class="text-body-1 fw-medium instagram-tag">@Bablu.code</div>
-                                        <div class="box-nav style-1">
-                                            <div class="nav-sw navigation-prev-playground">
-                                                <span class="icon icon-angle-left-solid"></span>
-                                            </div>
-                                            <div class="nav-sw navigation-next-playground">
-                                                <span class="icon icon-angle-right-solid"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="wrap-swiper">
-                                        <div class="swiper slider-playground swiper-auto">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <a href="asset/images/section/playground-1.jpg"
-                                                        data-lightbox="example-2">
-                                                        <img class="" src="images/playground-1.jpg"
-                                                            data-src="images/section/playground-1.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="asset/images/section/playground-2.jpg"
-                                                        data-lightbox="example-2">
-                                                        <img class="" src="images/playground-2.jpg"
-                                                            data-src="images/section/playground-2.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="asset/images/section/playground-3.jpg"
-                                                        data-lightbox="example-2">
-                                                        <img class="" src="images/playground-3.jpg"
-                                                            data-src="images/section/playground-3.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="asset/images/section/playground-4.jpg"
-                                                        data-lightbox="example-2">
-                                                        <img class="" src="images/playground-4.jpg"
-                                                            data-src="images/section/playground-4.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="asset/images/section/playground-1.jpg"
-                                                        data-lightbox="example-2">
-                                                        <img class="" src="images/playground-1.jpg"
-                                                            data-src="images/section/playground-1.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="asset/images/section/playground-2.jpg"
-                                                        data-lightbox="example-2">
-                                                        <img class="" src="images/playground-2.jpg"
-                                                            data-src="images/section/playground-2.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="asset/images/section/playground-3.jpg"
-                                                        data-lightbox="example-2">
-                                                        <img class="" src="images/playground-3.jpg"
-                                                            data-src="images/section/playground-3.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="asset/images/section/playground-4.jpg"
-                                                        data-lightbox="example-2">
-                                                        <img class="" src="images/playground-4.jpg"
-                                                            data-src="images/section/playground-4.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section-education" id="education">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="text-body-2 dot-before subtitle">Education</div>
-                                <h2 class="desc text-color-change text-tab">
-                                    <span></span> A foundation built on discipline and curiosity — here's a look at my
-                                    academic journey.
-                                </h2>
-                                <div class="experiences-wrap">
-
-                                    <!-- 10th Grade -->
-                                    <div class="item scrolling-effect effectLeft">
-                                        <div class="sub-heading text">Government School</div>
-                                        <div class="job-title">
-                                            <h6 class="title">10th Grade</h6>
-                                            <div class="text-body-2 time-line type-tags">2018 - 2019</div>
-                                        </div>
-                                    </div>
-
-                                    <!-- 12th Grade -->
-                                    <div class="item scrolling-effect effectLeft">
-                                        <div class="sub-heading text">Government School</div>
-                                        <div class="job-title">
-                                            <h6 class="title">12th Grade</h6>
-                                            <div class="text-body-2 time-line type-tags">2020 - 2021</div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Graduation -->
-                                    <div class="item scrolling-effect effectLeft">
-                                        <div class="sub-heading text">Amity University</div>
-                                        <div class="job-title">
-                                            <h6 class="title">Graduation BCA (Bachelors)</h6>
-                                            <div class="text-body-2 time-line type-tags">2023 - 2026</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-
-                <section class="section-experiences" id="experience">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="text-body-2 dot-before subtitle">Experiences</div>
-                                <h2 class="desc text-color-change text-tab">
-                                    <span></span> I offer more than just a place to live — it's a space designed to
-                                    reflect your unique style and inspiration.
-                                </h2>
-                                <div class="experiences-wrap">
-                                    <!-- Qwerty Code Trainee -->
-                                    <div class="item scrolling-effect effectLeft">
-                                        <div class="sub-heading text">Qwerty Code</div>
-                                        <div class="job-title">
-                                            <h6 class="title">Trainee Developer</h6>
-                                            <div class="text-body-2 time-line type-tags">Jan 2022 - Jun 2022</div>
-                                        </div>
-                                    </div>
-
-                                    <!-- React Developer -->
-                                    <div class="item scrolling-effect effectLeft">
-                                        <div class="sub-heading text">Freekaamaal.com</div>
-                                        <div class="job-title">
-                                            <h6 class="title">React & React Native Developer</h6>
-                                            <div class="text-body-2 time-line type-tags">Sep 2022 - May 2025</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item scrolling-effect effectLeft">
-                                        <div class="sub-heading text">Your Company / Startup</div>
-                                        <div class="job-title">
-                                            <h6 class="title">Full-Stack Developer</h6>
-                                            <div class="text-body-2 time-line type-tags">Coming Soon</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section-tech-stack">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="text-display-2 fw-medium heading split-text effect-right">Tech Stack</div>
-                                <div class="swiper slider-tech-stack">
-                                    <div class="swiper-wrapper">
-
-                                        <!-- React -->
-                                        <div class="swiper-slide">
-                                            <div class="tech-stack-item">
-                                                <h3 class="fw-medium title">React</h3>
-                                                <div class="image">
-                                                    <img src="images/react.png" alt="React Logo">
-                                                </div>
-                                                <div class="text-body-1">A powerful library for building interactive
-                                                    UIs.</div>
-                                            </div>
-                                        </div>
-
-
-
-
-
-                                        <!-- Node.js -->
-                                        <div class="swiper-slide">
-                                            <div class="tech-stack-item">
-                                                <h3 class="fw-medium title">Node.js</h3>
-                                                <div class="image">
-                                                    <img src="images/node.png" alt="Node.js Logo">
-                                                </div>
-                                                <div class="text-body-1">JavaScript runtime for fast backend services.
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-                                        <!-- AWS -->
-                                        <div class="swiper-slide">
-                                            <div class="tech-stack-item">
-                                                <h3 class="fw-medium title">AWS</h3>
-                                                <div class="image">
-                                                    <img src="images/aws.png" alt="AWS Logo">
-                                                </div>
-                                                <div class="text-body-1">Cloud services for hosting, storage, and
-                                                    deployment.</div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Next.js -->
-                                        <div class="swiper-slide">
-                                            <div class="tech-stack-item">
-                                                <h3 class="fw-medium title">Next.js</h3>
-                                                <div class="image">
-                                                    <img src="images/nextjs.png" alt="Next.js Logo">
-                                                </div>
-                                                <div class="text-body-1">Full-stack React framework with SSR & API
-                                                    routes.</div>
-                                            </div>
-                                        </div>
-
-                                        <!-- React Native -->
-                                        <div class="swiper-slide">
-                                            <div class="tech-stack-item">
-                                                <h3 class="fw-medium title">React Native</h3>
-                                                <div class="image">
-                                                    <img src="images/react.png" alt="React Native Logo">
-                                                </div>
-                                                <div class="text-body-1">Cross-platform mobile app development
-                                                    framework.</div>
-                                            </div>
-                                        </div>
-
-
-
-
-                                        <!-- Firebase -->
-                                        <div class="swiper-slide">
-                                            <div class="tech-stack-item">
-                                                <h3 class="fw-medium title">Firebase</h3>
-                                                <div class="image">
-                                                    <img src="images/firebase.png" alt="Firebase Logo">
-                                                </div>
-                                                <div class="text-body-1">Cloud-based backend services & authentication.
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Git & GitHub -->
-                                        <div class="swiper-slide">
-                                            <div class="tech-stack-item">
-                                                <h3 class="fw-medium title">Git & GitHub</h3>
-                                                <div class="image">
-                                                    <img src="images/git.png" alt="GitHub Logo">
-                                                </div>
-                                                <div class="text-body-1">Version control and code collaboration
-                                                    platform.</div>
-                                            </div>
-                                        </div>
-
-                                        <!-- CSS -->
-                                        <div class="swiper-slide">
-                                            <div class="tech-stack-item">
-                                                <h3 class="fw-medium title">CSS</h3>
-                                                <div class="image">
-                                                    <img src="images/css.png" alt="CSS Logo">
-                                                </div>
-                                                <div class="text-body-1">Styling the web with clean, responsive layouts.
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- MongoDB -->
-                                        <div class="swiper-slide">
-                                            <div class="tech-stack-item">
-                                                <h3 class="fw-medium title">MongoDB</h3>
-                                                <div class="image">
-                                                    <img src="images/mongodb.png" alt="MongoDB Logo">
-                                                </div>
-                                                <div class="text-body-1">NoSQL database for flexible and scalable data.
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- REST APIs -->
-                                        <div class="swiper-slide">
-                                            <div class="tech-stack-item">
-                                                <h3 class="fw-medium title">REST API</h3>
-                                                <div class="image">
-                                                    <img src="images/apis.png" alt="API Icon">
-                                                </div>
-                                                <div class="text-body-1">Custom APIs for secure client-server
-                                                    communication.</div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-
-                                    <div class="swiper-pagination pagination-tech-stack"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-                <div class="box-gradient1 img_bg-1"></div>
-
-                <div class="section-services" id="services">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="section-services-inner">
-                                    <div class="text-body-2 dot-before subtitle">My Services</div>
-                                    <div class="services-wrap accordion-wrap" id="accordion-services">
-
-                                        <!-- Web Development -->
-                                        <div class="item active accordion-item" data-bs-toggle="collapse" role="button"
-                                            data-bs-target="#collapse-services-1" aria-expanded="true"
-                                            aria-controls="collapse-services-1">
-                                            <div class="heading accordion-head">
-                                                <div class="icon">
-                                                    <i class="icon-code-solid"></i>
-                                                </div>
-                                                <div class="text-display-2 title fw-medium">
-                                                    <div class="split-text effect-right">Web Development</div>
-                                                    <span class="text-body-1">(01)</span>
-                                                </div>
-                                            </div>
-                                            <div id="collapse-services-1" class="accordion-collapse collapse show"
-                                                data-bs-parent="#accordion-services">
-                                                <div class="list-text">
-                                                    <div class="text sub-heading">Responsive Web Apps</div>
-                                                    <div class="text sub-heading">React.js / Next.js Development</div>
-                                                    <div class="text sub-heading">Backend APIs (Node.js / Express)</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Mobile App Development -->
-                                        <div class="item collapsed accordion-item" data-bs-toggle="collapse"
-                                            role="button" data-bs-target="#collapse-services-2" aria-expanded="true"
-                                            aria-controls="collapse-services-2">
-                                            <div class="heading accordion-head">
-                                                <div class="icon">
-                                                    <i class="icon-code-solid"></i>
-                                                </div>
-                                                <div class="text-display-2 title fw-medium">
-                                                    <div class="split-text effect-right">Mobile App Development</div>
-                                                    <span class="text-body-1">(02)</span>
-                                                </div>
-                                            </div>
-                                            <div id="collapse-services-2" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion-services">
-                                                <div class="list-text">
-                                                    <div class="text sub-heading">React Native Apps</div>
-                                                    <div class="text sub-heading">Cross-Platform Compatibility</div>
-                                                    <div class="text sub-heading">Play Store Deployment</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- UI Integration -->
-                                        <div class="item collapsed accordion-item" data-bs-toggle="collapse"
-                                            role="button" data-bs-target="#collapse-services-3" aria-expanded="true"
-                                            aria-controls="collapse-services-3">
-                                            <div class="heading accordion-head">
-                                                <div class="icon">
-                                                    <i class="icon-code-solid"></i>
-                                                </div>
-                                                <div class="text-display-2 title fw-medium">
-                                                    <div class="split-text effect-right">UI Integration</div>
-                                                    <span class="text-body-1">(03)</span>
-                                                </div>
-                                            </div>
-                                            <div id="collapse-services-3" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion-services">
-                                                <div class="list-text">
-                                                    <div class="text sub-heading">Pixel-Perfect Frontend</div>
-                                                    <div class="text sub-heading">Figma to Code</div>
-                                                    <div class="text sub-heading">Tailwind CSS / Bootstrap</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Maintenance & Optimization -->
-                                        <div class="item collapsed accordion-item" data-bs-toggle="collapse"
-                                            role="button" data-bs-target="#collapse-services-4" aria-expanded="true"
-                                            aria-controls="collapse-services-4">
-                                            <div class="heading accordion-head">
-                                                <div class="icon">
-                                                    <i class="icon-code-solid"></i>
-                                                </div>
-                                                <div class="text-display-2 title fw-medium">
-                                                    <div class="split-text effect-right">Maintenance & Optimization
-                                                    </div>
-                                                    <span class="text-body-1">(04)</span>
-                                                </div>
-                                            </div>
-                                            <div id="collapse-services-4" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion-services">
-                                                <div class="list-text">
-                                                    <div class="text sub-heading">Code Refactoring</div>
-                                                    <div class="text sub-heading">Performance Tuning</div>
-                                                    <div class="text sub-heading">Bug Fixes & Support</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="more-infor">
-                                        <div class="worldwide text-body-2">
-                                            <i class="icon icon-global"></i>
-                                            Available to <span>Worldwide</span>
-                                        </div>
-                                        <a class="text-body-1 link" href="#contact">
-                                            Contact me
-                                            <i class="icon icon-arrow-top-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <section class="section-selected-works" id="works">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="banner-slider">
-                                    <div class="text-container scroll-banners effect-right">
-                                        <span class="banner-text text-display-2 fw-medium">Selected Work</span>
-                                        <span class="banner-img"><span class="dot-circle"></span></span>
-                                        <span class="banner-text text-display-2 fw-medium">Selected Work</span>
-                                        <span class="banner-img"><span class="dot-circle"></span></span>
-                                        <span class="banner-text text-display-2 fw-medium">Selected Work</span>
-                                        <span class="banner-img"><span class="dot-circle"></span></span>
-                                        <span class="banner-text text-display-2 fw-medium">Selected Work</span>
-                                        <span class="banner-img"><span class="dot-circle"></span></span>
-                                        <span class="banner-text text-display-2 fw-medium">Selected Work</span>
-                                        <span class="banner-img"><span class="dot-circle"></span></span>
-                                        <span class="banner-text text-display-2 fw-medium">Selected Work</span>
-                                        <span class="banner-img"><span class="dot-circle"></span></span>
-                                    </div>
-                                </div>
-                                <div class="works-wrap">
-
-                                    <!-- Freekaamaal.com Website -->
-                                    <div class="works-item scrolling-effect effectLeft">
-                                        <a class="image" href="https://m.freekaamaal.com/" target="_blank"
-                                            data-lightbox="example-1">
-                                            <img class="" src="images/works-1.jpg" data-src="images/section/works-1.jpg"
-                                                alt="Freekaamaal Website">
-                                        </a>
-                                        <div class="content">
-                                            <div class="infor">
-                                                <div class="sub-heading sub">Website Development</div>
-                                                <h3 class="title">
-                                                    <a href="https://m.freekaamaal.com/"
-                                                        target="_blank">Freekaamaal.com</a>
-                                                </h3>
-                                                <a class="link date text-body-2 type-tags">2022 - 2023</a>
-                                            </div>
-                                            <a href="https://m.freekaamaal.com/" class="btn-links" target="_blank">
-                                                <i class="icon icon-arrow-top-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Freekaamaal App -->
-                                    <div class="works-item scrolling-effect effectLeft">
-                                        <a class="image"
-                                            href="https://play.google.com/store/apps/details?id=com.freekaamaalindia&hl=en_IN"
-                                            target="_blank" data-lightbox="example-1">
-                                            <img class="" src="images/works-2.jpg" data-src="images/section/works-2.jpg"
-                                                alt="Freekaamaal App">
-                                        </a>
-                                        <div class="content">
-                                            <div class="infor">
-                                                <div class="sub-heading sub">Android App Development</div>
-                                                <h3 class="title">
-                                                    <a href="https://play.google.com/store/apps/details?id=com.freekaamaalindia&hl=en_IN"
-                                                        target="_blank">Freekaamaal App</a>
-                                                </h3>
-                                                <a class="link date text-body-2 type-tags">2023 - 2024</a>
-                                            </div>
-                                            <a href="https://play.google.com/store/apps/details?id=com.freekaamaalindia&hl=en_IN"
-                                                class="btn-links" target="_blank">
-                                                <i class="icon icon-arrow-top-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Woost Website -->
-                                    <div class="works-item scrolling-effect effectLeft">
-                                        <a class="image" href="https://woost.io/" target="_blank"
-                                            data-lightbox="example-1">
-                                            <img class="" src="images/works-3.jpg" data-src="images/section/works-3.jpg"
-                                                alt="Woost Website">
-                                        </a>
-                                        <div class="content">
-                                            <div class="infor">
-                                                <div class="sub-heading sub">Website Development</div>
-                                                <h3 class="title">
-                                                    <a href="https://woost.io/" target="_blank">Woost.io</a>
-                                                </h3>
-                                                <a class="link date text-body-2 type-tags">2024</a>
-                                            </div>
-                                            <a href="https://woost.io/" class="btn-links" target="_blank">
-                                                <i class="icon icon-arrow-top-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Woost App -->
-                                    <div class="works-item scrolling-effect effectLeft">
-                                        <a class="image"
-                                            href="https://play.google.com/store/apps/details?id=com.woost&hl=en_IN"
-                                            target="_blank" data-lightbox="example-1">
-                                            <img class="" src="images/works-4.jpg" data-src="images/section/works-4.jpg"
-                                                alt="Woost App">
-                                        </a>
-                                        <div class="content">
-                                            <div class="infor">
-                                                <div class="sub-heading sub">Android App Development</div>
-                                                <h3 class="title">
-                                                    <a href="https://play.google.com/store/apps/details?id=com.woost&hl=en_IN"
-                                                        target="_blank">Woost App</a>
-                                                </h3>
-                                                <a class="link date text-body-2 type-tags">2023 - 2024</a>
-                                            </div>
-                                            <a href="https://play.google.com/store/apps/details?id=com.woost&hl=en_IN"
-                                                class="btn-links" target="_blank">
-                                                <i class="icon icon-arrow-top-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Bachat Jar (In Progress) -->
-                                    <div class="works-item scrolling-effect effectLeft">
-                                        <a class="image" href="https://bachatjar.com/" target="_blank"
-                                            data-lightbox="example-1">
-                                            <img class="" src="images/works-5.jpg" data-src="images/section/works-5.jpg"
-                                                alt="Bachat Jar">
-                                        </a>
-                                        <div class="content">
-                                            <div class="infor">
-                                                <div class="sub-heading sub">Web App (In Progress)</div>
-                                                <h3 class="title">
-                                                    <a href="https://bachatjar.com/" target="_blank">Bachat Jar</a>
-                                                </h3>
-                                                <a class="link date text-body-2 type-tags">In Progress</a>
-                                            </div>
-                                            <a href="https://bachatjar.com/" class="btn-links" target="_blank">
-                                                <i class="icon icon-arrow-top-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="box-gradient1 img_bg-2"></div>
-
-
-
-                <!-- <section class="section-testimonial" id="testimonial">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="section-testimonial-inner">
-                                    <div class="text-body-2 dot-before subtitle fw-medium">Testimonial</div>
-                                    <div class="testimonial-wrap">
-                                        <div class="swiper slider-testimonial">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <h3 class="fw-medium text">“ A studio with passionate, professional
-                                                        and full creativity. Much more than i’m expect. Great services,
-                                                        high quality products & affordable. ”</h3>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <h3 class="fw-medium text">“ A little universe of inspiration —
-                                                        where passion meets professionalism and creativity knows no
-                                                        bounds. Exceptional service, stunning products that made me go
-                                                        'wow' at first glance, and prices that make you smile! ”</h3>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <h3 class="fw-medium text">“ This studio is on another level! Super
-                                                        creative, totally pro, and packed with good vibes. Loved the
-                                                        service, obsessed with the quality — and the prices? Totally
-                                                        worth it! ”</h3>
-                                                </div>
-                                            </div>
-                                            <div class="box-nav style-2">
-                                                <div class="nav-sw navigation-prev-testimonial">
-                                                    <span class="icon icon-angle-left-solid"></span>
-                                                </div>
-                                                <div class="swiper-pagination pagination-testimonial"></div>
-                                                <div class="nav-sw navigation-next-testimonial">
-                                                    <span class="icon icon-angle-right-solid"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customer-wrap">
-                                        <div class="swiper slider-customer">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="customer-info">
-                                                        <div class="image">
-                                                            <img class="" src="images/avatar-2.jpg"
-                                                                data-src="images/avatar/avatar-2.jpg" alt="">
-                                                        </div>
-                                                        <div class="content">
-                                                            <h6 class="name fw-medium">
-                                                                <a href="#" class="link">Lewis Jones</a>
-                                                            </h6>
-                                                            <div class="text-body-2 info">Ceo of Avade Inc</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="customer-info">
-                                                        <div class="image">
-                                                            <img class="" src="images/avatar-3.jpg"
-                                                                data-src="images/avatar/avatar-3.jpg" alt="">
-                                                        </div>
-                                                        <div class="content">
-                                                            <h6 class="name fw-medium">
-                                                                <a href="#" class="link">jayden</a>
-                                                            </h6>
-                                                            <div class="text-body-2 info">Ceo of Avade Inc</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="customer-info">
-                                                        <div class="image">
-                                                            <img class="" src="images/avatar-4.jpg"
-                                                                data-src="images/avatar/avatar-4.jpg" alt="">
-                                                        </div>
-                                                        <div class="content">
-                                                            <h6 class="name fw-medium">
-                                                                <a href="#" class="link">Musk</a>
-                                                            </h6>
-                                                            <div class="text-body-2 info">Ceo of Avade Inc</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section> -->
-
-                <!-- <section class="section-partners" id="partners">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="text-body-2 dot-before subtitle">Clients</div>
-                                <h2 class="desc text-color-change text-tab">
-                                    <span></span> Haven offers more than just a place to live it’s a space designed to
-                                    reflect your unique style inspiration
-                                </h2>
-                                <div class="swiper slider-partners swiper-auto">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="partners-item">
-                                                <img src="images/logo_zm.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="partners-item">
-                                                <img src="images/Union.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="partners-item">
-                                                <img src="images/archin.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="partners-item">
-                                                <img src="images/Symbol.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="partners-item">
-                                                <img src="images/Github_logo.svg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section> -->
-
-                <section class="section-process">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="text-display-2 fw-medium heading split-text effect-right">Work Process</div>
-                                <div class="swiper slider-process swiper-auto">
-                                    <div class="swiper-wrapper">
-
-                                        <!-- Step 1 -->
-                                        <div class="swiper-slide">
-                                            <div class="process-item">
-                                                <div class="content">
-                                                    <div class="step text-body-2 fw-medium dot-before type-tags">Step 1
-                                                    </div>
-                                                    <div class="wrap">
-                                                        <h2 class="fw-medium title">Understand <br> Requirements</h2>
-                                                        <div class="text-body-2 fw-medium text">Gather and analyze
-                                                            client needs to define the project scope clearly.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="image">
-                                                    <div class="gradient-icon gradient-icon-1"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Step 2 -->
-                                        <div class="swiper-slide">
-                                            <div class="process-item">
-                                                <div class="content">
-                                                    <div class="step text-body-2 fw-medium dot-before type-tags">Step 2
-                                                    </div>
-                                                    <div class="wrap">
-                                                        <h2 class="fw-medium title">Plan & <br> Wireframe</h2>
-                                                        <div class="text-body-2 fw-medium text">Create the project
-                                                            structure and layout using wireframes for clarity.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="image">
-                                                    <div class="gradient-icon gradient-icon-2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Step 3 -->
-                                        <div class="swiper-slide">
-                                            <div class="process-item">
-                                                <div class="content">
-                                                    <div class="step text-body-2 fw-medium dot-before type-tags">Step 3
-                                                    </div>
-                                                    <div class="wrap">
-                                                        <h2 class="fw-medium title">Development</h2>
-                                                        <div class="text-body-2 fw-medium text">Turn designs into
-                                                            working code using tools like React, Next.js, and APIs.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="image">
-                                                    <div class="gradient-icon gradient-icon-3"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Step 4 -->
-                                        <div class="swiper-slide">
-                                            <div class="process-item">
-                                                <div class="content">
-                                                    <div class="step text-body-2 fw-medium dot-before type-tags">Step 4
-                                                    </div>
-                                                    <div class="wrap">
-                                                        <h2 class="fw-medium title">Testing & <br> Deployment</h2>
-                                                        <div class="text-body-2 fw-medium text">Test functionality and
-                                                            performance before deploying the final product live.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="image">
-                                                    <div class="gradient-icon gradient-icon-4"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-
-                <!-- <section class="section-awards" id="awards">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="text-display-2 fw-medium heading split-text effect-right">My Awards</div>
-                                <div class="list-awards">
-                                    <div class="award-item scrolling-effect effectLeft">
-                                        <h6 class="number fw-medium">1</h6>
-                                        <h6 class="title fw-medium">Awards Site of the Day - Hubfolio</h6>
-                                        <div class="time text-body-1">3/8/2024</div>
-                                    </div>
-                                    <div class="award-item scrolling-effect effectLeft">
-                                        <h6 class="number fw-medium">2</h6>
-                                        <h6 class="title fw-medium">Dribbble - Top Dependent Designer of the year</h6>
-                                        <div class="time text-body-1">3/8/2024</div>
-                                    </div>
-                                    <div class="award-item scrolling-effect effectLeft">
-                                        <h6 class="number fw-medium">3</h6>
-                                        <h6 class="title fw-medium">CSS Web Design Awards - Site of the Month</h6>
-                                        <div class="time text-body-1">3/8/2024</div>
-                                    </div>
-                                    <div class="award-item scrolling-effect effectLeft">
-                                        <h6 class="number fw-medium">4</h6>
-                                        <h6 class="title fw-medium">Top 10 Behance Desinger 2024</h6>
-                                        <div class="time text-body-1">3/8/2024</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section> -->
-
-                <section class="section-pricing" id="pricing">
-                    <div class="tf-container wg-tabs">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="heading">
-                                    <div class="text-display-2 fw-medium title split-text effect-right">My Pricing</div>
-                                    <div class="menu-tab style-1">
-                                        <div class="item sub-heading active">Standard Plan</div>
-                                        <div class="item sub-heading">Premium Plan</div>
-                                    </div>
-                                </div>
-
-                                <div class="widget-content-tab">
-                                    <div class="widget-content-inner active">
-                                        <div class="pricing-item wow fadeInUp">
-                                            <div class="top">
-                                                <h6 class="dot-before fw-medium title">Standard Plan</h6>
-                                                <div class="text-body-1 fw-medium text">Need just Frontend, Backend, or
-                                                    API setup? Start small, grow fast.</div>
-                                                <div class="price">
-                                                    <div class="text-display-2 fw-medium number">₹25k</div>
-                                                    <span>/ single stack module</span>
-                                                </div>
-                                            </div>
-                                            <div class="list-desc">
-                                                <div class="desc text-body-1">Choose one: Frontend / Backend / API
-                                                    integration</div>
-                                                <div class="desc text-body-1">Modern tech: React, Node, Express, MongoDB
-                                                </div>
-                                                <div class="desc text-body-1">Responsive & scalable architecture</div>
-                                                <div class="desc text-body-1">Remote development, weekdays only</div>
-                                                <div class="desc text-body-1"> <strong>Note:</strong> Prices mentioned
-                                                    are base starting prices. Final cost may vary depending on project
-                                                    complexity and requirements.</div>
-                                            </div>
-                                            <div class="bot-btn">
-                                                <a href="#contact" class="text-body-2 fw-medium">
-                                                    Get Started
-                                                    <i class="icon icon-arrow-top-right"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Premium Plan -->
-                                    <div class="widget-content-inner">
-                                        <div class="pricing-item">
-                                            <div class="top">
-                                                <h6 class="dot-before fw-medium title">Premium Plan</h6>
-                                                <div class="text-body-1 fw-medium text">Complete software solution:
-                                                    UI/UX to deployment & beyond.</div>
-                                                <div class="price">
-                                                    <div class="text-display-2 fw-medium number">₹55k</div>
-                                                    <span>/ full project</span>
-                                                </div>
-                                            </div>
-                                            <div class="list-desc">
-                                                <div class="desc text-body-1">Custom design + full-stack development
-                                                </div>
-                                                <div class="desc text-body-1">Tech used: Figma, React, Next.js, Node.js,
-                                                    MongoDB</div>
-                                                <div class="desc text-body-1">API integration, authentication,
-                                                    dashboards</div>
-                                                <div class="desc text-body-1">Hosting, deployment, & domain setup</div>
-                                                <div class="desc text-body-1">Business day delivery, no weekends</div>
-                                                <div class="desc text-body-1"> <strong>Note:</strong> Prices mentioned
-                                                    are base starting prices. Final cost may vary depending on project
-                                                    complexity and requirements.</div>
-
-                                            </div>
-                                            <div class="bot-btn">
-                                                <a href="#contact" class="text-body-2 fw-medium">
-                                                    Get Started
-                                                    <i class="icon icon-arrow-top-right"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <!-- Custom Quote CTA -->
-                                <a href="#contact" class="custom-quote fw-medium h3 wow fadeInUp" data-wow-delay="0.1s">
-                                    Need Full Software Development or a Specific Tech Stack? Get a Custom Quote
-                                    <i class="icon icon-arrow-top-right"></i>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section-faqs" id="faqs">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="text-display-2 fw-medium heading split-text effect-right">FAQs</div>
-                                <div class="accordion-wrap" id="accordion-1">
-
-                                    <!-- FAQ 1 -->
-                                    <div class="item active accordion-item scrolling-effect effectLeft"
-                                        data-bs-toggle="collapse" role="button" data-bs-target="#collapse1"
-                                        aria-expanded="true" aria-controls="collapse1">
-                                        <h6 class="accordion-head fw-medium">
-                                            How long does a typical project take?
-                                            <span class="icon"></span>
-                                        </h6>
-                                        <div id="collapse1" class="accordion-collapse collapse show"
-                                            data-bs-parent="#accordion-1">
-                                            <p class="text-body-2 fw-medium">
-                                                It depends on the project scope. A simple frontend app can take 5–7
-                                                days, while full-stack solutions may take 5–9 weeks.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- FAQ 2 -->
-                                    <div class="item accordion-item collapsed scrolling-effect effectLeft"
-                                        data-bs-toggle="collapse" role="button" data-bs-target="#collapse2"
-                                        aria-expanded="false" aria-controls="collapse2">
-                                        <h6 class="accordion-head fw-medium">
-                                            What technologies do you work with?
-                                            <span class="icon"></span>
-                                        </h6>
-                                        <div id="collapse2" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordion-1">
-                                            <p class="text-body-2 fw-medium">
-                                                I specialize in React, Next.js, Node.js, MongoDB, CSS, Git/GitHub, and
-                                                AWS. I also work with APIs and integrate third-party services.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- FAQ 3 -->
-                                    <div class="item accordion-item collapsed scrolling-effect effectLeft"
-                                        data-bs-toggle="collapse" role="button" data-bs-target="#collapse3"
-                                        aria-expanded="false" aria-controls="collapse3">
-                                        <h6 class="accordion-head fw-medium">
-                                            Do you provide UI/UX design as well?
-                                            <span class="icon"></span>
-                                        </h6>
-                                        <div id="collapse3" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordion-1">
-                                            <p class="text-body-2 fw-medium">
-                                                Yes! I use Figma and Framer to create clean, modern, and user-friendly
-                                                interfaces before development begins.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- FAQ 4 -->
-                                    <div class="item accordion-item collapsed scrolling-effect effectLeft"
-                                        data-bs-toggle="collapse" role="button" data-bs-target="#collapse4"
-                                        aria-expanded="false" aria-controls="collapse4">
-                                        <h6 class="accordion-head fw-medium">
-                                            What if I want changes after delivery?
-                                            <span class="icon"></span>
-                                        </h6>
-                                        <div id="collapse4" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordion-1">
-                                            <p class="text-body-2 fw-medium">
-                                                Minor revisions are included post-delivery. Major changes or new
-                                                features will be billed additionally.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- FAQ 5 -->
-                                    <div class="item accordion-item collapsed scrolling-effect effectLeft"
-                                        data-bs-toggle="collapse" role="button" data-bs-target="#collapse5"
-                                        aria-expanded="false" aria-controls="collapse5">
-                                        <h6 class="accordion-head fw-medium">
-                                            Do you offer refunds?
-                                            <span class="icon"></span>
-                                        </h6>
-                                        <div id="collapse5" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordion-1">
-                                            <p class="text-body-2 fw-medium">
-                                                Refunds are not offered once development has started. However, I ensure
-                                                proper communication and milestones to avoid dissatisfaction.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="ask-me">
-                                    <div class="text-body-2 fw-medium text">Do you have any other questions?</div>
-                                    <a href="#contact" class="text-body-2 fw-medium link">Ask me directly</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section-contact" id="contact">
-                    <div class="tf-container">
-                        <div class="row">
-                            <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                                <div class="section-contact-inner">
-                                    <h1 class="fw-medium heading">Contact For <br> Work / Information</h1>
-                                    <form action="https://api.web3forms.com/submit" method="POST" class="form-contact">
-
-                                        <input type="hidden" name="access_key"
-                                            value="1b3ac6c4-5822-498a-8224-eaefa016b765">
-
-
-
-                                        <fieldset class="fiel-mail">
-                                            <label class="text-xs-2">Your Email</label>
-                                            <input type="email" name="email" id="mail" placeholder="Enter the Email"
-                                                required>
-                                        </fieldset>
-
-                                        <fieldset class="fiel-phone">
-                                            <label class="text-xs-2">Your Phone</label>
-                                            <input type="text" name="phone" id="phone"
-                                                placeholder="Enter your phone number" required>
-                                        </fieldset>
-
-                                        <fieldset class="fiel-text">
-                                            <label class="text-xs-2">Messenger</label>
-                                            <textarea name="message" id="message" placeholder="Your message"
-                                                required></textarea>
-                                        </fieldset>
-
-                                        <input type="hidden" name="redirect"
-                                            value="https://bablu-verma.github.io/thank-you.html">
-
-
-                                        <div class="pricing-list list-choose">
-                                            <div class="bot-btn send-wrap">
-                                                <button type="submit" class="text-body-2 fw-medium">
-                                                    <span class="font-poppins flex-grow-1 text-start">Get Started</span>
-                                                    <i class="icon icon-arrow-top-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-            </div>
-
-        </div>
-
-        <footer class="tf-footer style-1">
-            <div class="tf-container">
-                <div class="row">
-                    <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
-                        <a href="#contact" class="cta">
-                            <img class=" signature" src="images/signature.png" data-src="images/section/signature.png"
-                                alt="">
-
-                            <div class="infiniteslide_wrap cta-infiniteslide style-1">
-                                <div class="infiniteslide">
-                                    <div class="marquee-child-item">
-                                        <div class="text-display-2">Book A Call</div>
-                                    </div>
-                                    <div class="marquee-child-item">
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="marquee-child-item">
-                                        <div class="text-display-2">Book A Call</div>
-                                    </div>
-                                    <div class="marquee-child-item">
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="marquee-child-item">
-                                        <div class="text-display-2">Book A Call</div>
-                                    </div>
-                                    <div class="marquee-child-item">
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="marquee-child-item">
-                                        <div class="text-display-2">Book A Call</div>
-                                    </div>
-                                    <div class="marquee-child-item">
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="marquee-child-item">
-                                        <div class="text-display-2">Book A Call</div>
-                                    </div>
-                                    <div class="marquee-child-item">
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="marquee-child-item">
-                                        <div class="text-display-2">Book A Call</div>
-                                    </div>
-                                    <div class="marquee-child-item">
-                                        <div class="dot"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <img src="images/img-bg-2.png" alt="" class="map">
-            <div class="box-gradient2"></div>
-        </footer>
-
-
-
-
+      </div>
     </div>
 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/lazysize.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/gsap.min.js"></script>
-    <script src="js/Splitetext.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <script src="js/ScrollSmooth.js"></script>
-    <script src="js/handleeffectgsap.js"></script>
-    <script src="js/odometer.min.js"></script>
-    <script src="js/counter.js"></script>
+    <div class="hero-scroll-wrap reveal">
+      <div class="hero-scroll">
+        <div class="hero-scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/infinityslide.js"></script>
-    <script src="js/plugin.js"></script>
-    <script src="js/lightbox.min.js"></script>
-    <script src="js/main.js"></script>
+  <!-- MARQUEE (Advanced Design) -->
+  <section class="marquee-advanced">
+    <div class="marquee-row marquee-to-left">
+      <div class="marquee-content">
+        <span>React</span><span>Next.js</span><span>Node.js</span><span>TypeScript</span><span>GSAP</span><span>Tailwind</span><span>Three.js</span><span>AWS</span><span>Docker</span><span>MongoDB</span>
+        <span>React</span><span>Next.js</span><span>Node.js</span><span>TypeScript</span><span>GSAP</span><span>Tailwind</span><span>Three.js</span><span>AWS</span><span>Docker</span><span>MongoDB</span>
+      </div>
+    </div>
+    <div class="marquee-row marquee-to-right">
+      <div class="marquee-content">
+        <span>Product Design</span><span>Backend Logic</span><span>Frontend Magic</span><span>Clean
+          Code</span><span>Scalability</span><span>Performance</span><span>Responsive</span><span>Mobile
+          First</span><span>Accessibility</span>
+        <span>Product Design</span><span>Backend Logic</span><span>Frontend Magic</span><span>Clean
+          Code</span><span>Scalability</span><span>Performance</span><span>Responsive</span><span>Mobile
+          First</span><span>Accessibility</span>
+      </div>
+    </div>
+  </section>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div>
+      <div class="section-label reveal">About Me</div>
+      <h2 class="about-title reveal">
+        Crafting<br>
+        <em>beautiful</em><br>
+        digital worlds
+      </h2>
+      <p class="about-text reveal">
+        I'm Bablu Verma — a Full Stack Developer with 3+ years of experience building scalable web and mobile
+        applications.
+        I specialize in React.js, Next.js, Node.js, and React Native.
+
+        I focus on building fast, secure, and SEO-optimized applications using SSR/SSG and modern architecture.
+        I also have experience integrating AI tools like OpenAI and building real-time systems.
+      </p>
+      <div class="about-stats reveal">
+        <div class="stat-box">
+          <div class="stat-num" data-count="3">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-count="20">0</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-count="5">0</div>
+          <div class="stat-label">Team Size Led</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-count="10">0</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-right reveal">
+      <div class="skills-group">
+        <div class="skills-group-title">Frontend</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>React</span></div>
+          <div class="skill-tag"><span>Next.js</span></div>
+          <div class="skill-tag"><span>TypeScript</span></div>
+          <div class="skill-tag"><span>Tailwind</span></div>
+          <div class="skill-tag"><span>React Native</span></div>
+          <div class="skill-tag"><span>Three.js</span></div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Backend</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>Node.js</span></div>
+          <div class="skill-tag"><span>Express</span></div>
+          <div class="skill-tag"><span>GraphQL</span></div>
+          <div class="skill-tag"><span>REST APIs</span></div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Database</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>MongoDB</span></div>
+          <div class="skill-tag"><span>Redis</span></div>
+          <div class="skill-tag"><span>PostgreSQL</span></div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Infrastructure</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>Docker</span></div>
+          <div class="skill-tag"><span>AWS</span></div>
+          <div class="skill-tag"><span>Firebase</span></div>
+          <div class="skill-tag"><span>Supabase</span></div>
+          <div class="skill-tag"><span>Netlify</span></div>
+          <div class="skill-tag"><span>Vercel</span></div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Tools & Design</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>Git</span></div>
+          <div class="skill-tag"><span>GitHub</span></div>
+          <div class="skill-tag"><span>Postman</span></div>
+          <div class="skill-tag"><span>VS Code</span></div>
+          <div class="skill-tag"><span>PM2</span></div>
+          <div class="skill-tag"><span>Nginx</span></div>
+          <div class="skill-tag"><span>Linux</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-header">
+      <div>
+        <div class="section-label reveal">What I Do</div>
+        <h2 class="services-title reveal">My Expert<br><em>Services</em></h2>
+      </div>
+      <p class="services-desc reveal">
+        I provide comprehensive digital solutions that combine technical precision with creative vision.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <h3 class="service-name">Full Stack Development</h3>
+        <p class="service-text">Building high-performance, scalable web applications using MERN & Next.js frameworks
+          with clean, maintainable architecture.</p>
+        <ul class="service-tags">
+          <li>React</li>
+          <li>Node.js</li>
+          <li>Next.js</li>
+          <li>GraphQL</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <h3 class="service-name">App Development</h3>
+        <p class="service-text">Building high-performance, scalable Mobile applications using React Native frameworks
+          with clean, maintainable architecture.</p>
+        <ul class="service-tags">
+          <li>React Native</li>
+          <li>Firebase</li>
+          <li>App Store</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <h3 class="service-name">Backend & API Design</h3>
+        <p class="service-text">Designing robust server-side infrastructures and RESTful/GraphQL APIs that handle
+          thousands of requests with zero downtime.</p>
+        <ul class="service-tags">
+          <li>Express</li>
+          <li>PostgreSQL</li>
+          <li>Microservices</li>
+          <li>Redis</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-num">04</div>
+        <h3 class="service-name">Cloud & Infrastructure</h3>
+        <p class="service-text">Implementing secure, scalable cloud infrastructure with AWS and Docker to ensure your
+          application is always available and safe.</p>
+        <ul class="service-tags">
+          <li>AWS</li>
+          <li>Docker</li>
+          <li>CI/CD</li>
+          <li>Linux</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects-header">
+      <div class="reveal">
+        <div class="section-label">Selected Work</div>
+        <div class="projects-title">Projects<br><span
+            style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);">&amp; Case
+            Studies</span></div>
+      </div>
+      <div class="projects-count reveal">06 Projects</div>
+    </div>
+
+    <div id="project-list">
+      <div class="project-item reveal"
+        data-img="https://play-lh.googleusercontent.com/Q0ctVoXZLX9_bygKC3g8WHSlqK1pbB0yQkep4NtXbMDGCnxZZxikohw6HfEUs0eaPA=w526-h296-rw">
+        <div class="project-img-wrap">
+          <img
+            src="https://play-lh.googleusercontent.com/Q0ctVoXZLX9_bygKC3g8WHSlqK1pbB0yQkep4NtXbMDGCnxZZxikohw6HfEUs0eaPA=w526-h296-rw"
+            alt="Woost.io" />
+        </div>
+        <div class="project-num">01</div>
+        <div>
+          <div class="project-name">Woost.io</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Freelancing
+            platform (Web + App) with real-time features</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">React.js</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">Tailwind CSS</span>
+        </div>
+        <a href="https://woost.io/" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14"
+            fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+
+      <div class="project-item reveal"
+        data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTslUBIWXTFgqKVhflb_9hFIU79c7YrSGQ9pg&s">
+        <div class="project-img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTslUBIWXTFgqKVhflb_9hFIU79c7YrSGQ9pg&s"
+            alt="Freekaamaal" />
+        </div>
+        <div class="project-num">02</div>
+        <div>
+          <div class="project-name">Freekaamaal</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Cashback & deals
+            platform with SEO optimization</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">React.js</span>
+          <span class="tech-badge">Next.js</span>
+          <span class="tech-badge">Optimization</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">SEO</span>
+          <span class="tech-badge">Tailwind CSS</span>
+        </div>
+        <a href="https://freekaamaal.com/" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14"
+            fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+
+      <div class="project-item reveal"
+        data-img="https://media.licdn.com/dms/image/v2/D560BAQFnL_ppasbG5g/company-logo_200_200/B56Zc6_R_DG0AI-/0/1749041357267/bachat_jar_logo?e=2147483647&v=beta&t=YUE5O0Iyu4eef1BKetG-kQzYv1tvICc7FI1x--cUwME">
+        <div class="project-img-wrap">
+          <img
+            src="https://media.licdn.com/dms/image/v2/D560BAQFnL_ppasbG5g/company-logo_200_200/B56Zc6_R_DG0AI-/0/1749041357267/bachat_jar_logo?e=2147483647&v=beta&t=YUE5O0Iyu4eef1BKetG-kQzYv1tvICc7FI1x--cUwME"
+            alt="BachatJar" />
+        </div>
+        <div class="project-num">03</div>
+        <div>
+          <div class="project-name">BachatJar</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Coupon &
+            cashback website with SSR & SEO optimization</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Next.js</span>
+          <span class="tech-badge">Linux</span>
+          <span class="tech-badge">Deployment</span>
+          <span class="tech-badge">MongoDB</span>
+          <span class="tech-badge">Redis</span>
+          <span class="tech-badge">Optimization</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">SEO</span>
+          <span class="tech-badge">Tailwind CSS</span>
+        </div>
+        <a href="https://bachatjar.com" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14"
+            fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+
+      <div class="project-item reveal"
+        data-img="https://www.gaurastra.com/static/media/loginbg.40097bd9cadc2f9e5bad.webp">
+        <div class="project-img-wrap">
+          <img src="https://www.gaurastra.com/static/media/loginbg.40097bd9cadc2f9e5bad.webp" alt="Gaurastra" />
+        </div>
+        <div class="project-num">04</div>
+        <div>
+          <div class="project-name">Gaurastra</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Full-stack
+            e-commerce with PhonePe integration</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Next.js</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">MongoDB</span>
+          <span class="tech-badge">Express</span>
+          <span class="tech-badge">Tailwind CSS</span>
+          <span class="tech-badge">PhonePe</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">Deployment</span>
+          <span class="tech-badge">Optimization</span>
+          <span class="tech-badge">SEO</span>
+        </div>
+        <a href="https://www.gaurastra.com" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14"
+            fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+
+      <div class="project-item reveal"
+        data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS34Q1m4GlZxV1WTh8Rrj2RcqA_jqVkZT1jg&s">
+        <div class="project-img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS34Q1m4GlZxV1WTh8Rrj2RcqA_jqVkZT1jg&s"
+            alt="POS System" />
+        </div>
+        <div class="project-num">05</div>
+        <div>
+          <div class="project-name">POS System</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Offline-first
+            billing system for retail stores</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Socket.io</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">MongoDB</span>
+          <span class="tech-badge">Express</span>
+          <span class="tech-badge">Tailwind CSS</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">Deployment</span>
+        </div>
+        <a href="https://test.gaurastra.com/offline/login" class="project-link">View <svg width="14" height="14"
+            viewBox="0 0 14 14" fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+
+      <div class="project-item reveal"
+        data-img="https://strategyclasses.in/static/media/favicon.ee51e7eac7ceaec9d444.png">
+        <div class="project-img-wrap">
+          <img src="https://strategyclasses.in/static/media/favicon.ee51e7eac7ceaec9d444.png" alt="Strategy Classes" />
+        </div>
+        <div class="project-num">06</div>
+        <div>
+          <div class="project-name">Strategy Classes</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Exam platform with
+            optimized backend APIs</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">MongoDB</span>
+          <span class="tech-badge">PostgreSQL</span>
+          <span class="tech-badge">React.js</span>
+          <span class="tech-badge">Express</span>
+          <span class="tech-badge">Tailwind CSS</span>
+          <span class="tech-badge">javascript</span>
+          <span class="tech-badge">Deployment</span>
+        </div>
+        <a href="http://strategyclasses.in/" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14"
+            fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="gallery-header">
+      <div>
+        <div class="section-label reveal">Visual Gallery</div>
+        <h2 class="gallery-title reveal">Design<br><span
+            style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);">Works</span>
+        </h2>
+      </div>
+      <p class="gallery-desc reveal">
+        A curated collection of UI explorations, design systems, and visual experiments that push the boundaries of
+        what's possible in the browser.
+      </p>
+    </div>
+
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="all">All Work</button>
+      <button class="filter-btn" data-filter="ui">UI Design</button>
+      <button class="filter-btn" data-filter="web">Web Dev</button>
+      <button class="filter-btn" data-filter="motion">Motion</button>
+      <button class="filter-btn" data-filter="brand">Branding</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item g1" data-cat="ui">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80" alt="Abstract gradient UI"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Gradient Systems</div>
+          <div class="gallery-item-cat">UI Design</div>
+        </div>
+      </div>
+      <div class="gallery-item g2" data-cat="web">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80" alt="Code editor dark theme"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">NexCommerce UI</div>
+          <div class="gallery-item-cat">Web Dev</div>
+        </div>
+      </div>
+      <div class="gallery-item g3" data-cat="brand">
+        <img src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=600&q=80" alt="Branding mockup"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Brand Identity</div>
+          <div class="gallery-item-cat">Branding</div>
+        </div>
+      </div>
+      <div class="gallery-item g4" data-cat="motion">
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&q=80" alt="Motion graphics neon"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Kinetic Type</div>
+          <div class="gallery-item-cat">Motion</div>
+        </div>
+      </div>
+      <div class="gallery-item g5" data-cat="ui">
+        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" alt="UI design system"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Design System</div>
+          <div class="gallery-item-cat">UI Design</div>
+        </div>
+      </div>
+      <div class="gallery-item g6" data-cat="web">
+        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80" alt="Dashboard analytics"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Lumina Dashboard</div>
+          <div class="gallery-item-cat">Web Dev</div>
+        </div>
+      </div>
+      <div class="gallery-item g7" data-cat="brand">
+        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80" alt="Typography poster"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Type Poster</div>
+          <div class="gallery-item-cat">Branding</div>
+        </div>
+      </div>
+      <div class="gallery-item g8" data-cat="motion">
+        <img src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=600&q=80" alt="3D render abstract"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">3D Exploration</div>
+          <div class="gallery-item-cat">Motion</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="ui">
+        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&q=80" alt="Mobile app mockup"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Mobile App UI</div>
+          <div class="gallery-item-cat">UI Design</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label reveal">Experience &amp; Recognition</div>
+
+    <div class="exp-grid">
+      <div class="exp-timeline reveal">
+
+        <div class="exp-item">
+          <div class="exp-year">2025 — 2026</div>
+          <div class="exp-role">Full Stack Developer</div>
+          <div class="exp-company">4tuners Technologies</div>
+          <div class="exp-desc">
+            Built e-commerce apps, POS system & payment integrations. Led team of 5 members.
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-year">2022 — 2025</div>
+          <div class="exp-role">React & React Native Developer</div>
+          <div class="exp-company">Freekaamaal.com</div>
+          <div class="exp-desc">
+            Developed web & mobile apps with real-time features and Firebase integration.
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-year">2022</div>
+          <div class="exp-role">Web Developer</div>
+          <div class="exp-company">Qwerty Code</div>
+          <div class="exp-desc">
+            Built scalable backend APIs using Node.js & MongoDB.
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-right reveal">
+        <div class="exp-big-text">
+          Building things<br>that <em>matter.</em>
+        </div>
+        <div class="section-label">Recognitions</div>
+        <ul class="awards-list">
+          <li class="award-item">
+            <div>
+              <div class="award-name">Best Developer Portfolio</div>
+              <div class="award-org">Awwwards Honorable Mention</div>
+            </div>
+            <div class="award-year">2024</div>
+          </li>
+          <li class="award-item">
+            <div>
+              <div class="award-name">Hackathon Winner</div>
+              <div class="award-org">Smart India Hackathon</div>
+            </div>
+            <div class="award-year">2023</div>
+          </li>
+          <li class="award-item">
+            <div>
+              <div class="award-name">Open Source Contributor</div>
+              <div class="award-org">GitHub Arctic Vault Program</div>
+            </div>
+            <div class="award-year">2023</div>
+          </li>
+          <li class="award-item">
+            <div>
+              <div class="award-name">Top 5% Developer</div>
+              <div class="award-org">Stack Overflow Dev Survey</div>
+            </div>
+            <div class="award-year">2022</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="education">
+    <div class="section-label reveal">Education</div>
+
+    <div class="exp-grid">
+      <div class="exp-timeline reveal">
+
+        <div class="exp-item">
+          <div class="exp-year">2023 — 2026</div>
+          <div class="exp-role">BCA (Cloud & Cyber Security)</div>
+          <div class="exp-company">Amity University</div>
+          <div class="exp-desc">
+            Specializing in cloud infrastructure, cybersecurity protocols, and scalable system design.
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-year">2020 — 2021</div>
+          <div class="exp-role">12th Grade (Senior Secondary)</div>
+          <div class="exp-company">GBSS School, Delhi</div>
+          <div class="exp-desc">
+            Completed secondary education with a focus on technical subjects and logical reasoning.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="exp-right reveal">
+        <div class="exp-big-text">
+          Learning<br>to <em>Evolve.</em>
+        </div>
+        <div class="section-label">Other Learning</div>
+        <ul class="awards-list">
+          <li class="award-item">
+            <div>
+              <div class="award-name">Cloud Infrastructure</div>
+              <div class="award-org">AWS Academy</div>
+            </div>
+            <div class="award-year">2024</div>
+          </li>
+          <li class="award-item">
+            <div>
+              <div class="award-name">Cyber Security Essentials</div>
+              <div class="award-org">Cisco Networking Academy</div>
+            </div>
+            <div class="award-year">2023</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- GITHUB SECTION -->
+  <section id="github-section">
+    <div class="github-inner">
+      <div class="reveal">
+        <div class="section-label" style="color:rgba(245,240,232,0.4);">Open Source</div>
+        <h2 class="github-title">Code I've<br>put into <em>the world.</em></h2>
+        <p class="github-desc">Every commit tells a story. Every repo is a conversation. I believe in building in public
+          and contributing to the ecosystem that built me.</p>
+        <a href="https://github.com" target="_blank" class="github-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          View GitHub Profile
+        </a>
+      </div>
+
+      <div class="reveal">
+        <div id="github-stats">
+          <div class="gh-stat">
+            <div class="gh-num" id="ghRepos">—</div>
+            <div class="gh-label">Repositories</div>
+          </div>
+          <div class="gh-stat">
+            <div class="gh-num" id="ghStars">—</div>
+            <div class="gh-label">Stars Earned</div>
+          </div>
+          <div class="gh-stat">
+            <div class="gh-num" id="ghFollowers">—</div>
+            <div class="gh-label">Followers</div>
+          </div>
+          <div class="gh-stat">
+            <div class="gh-num" id="ghContribs">—</div>
+            <div class="gh-label">Year Contributions</div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div>
+        <div class="section-label reveal">Get In Touch</div>
+        <div class="contact-big reveal">
+          Let's<br>
+          <em>build</em><br>
+          together.
+        </div>
+        <p class="contact-sub reveal">
+          Whether you have a project in mind, want to collaborate, or just want to say hello — I'm always up for a good
+          conversation.
+        </p>
+        <div class="contact-links reveal">
+          <a href="mailto:jbabluverma@gmail.com" class="contact-link">
+            <div>
+              <div class="contact-link-name">Email</div>
+              <div class="contact-link-handle">jbabluverma@gmail.com</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+          <a href="https://github.com/bablu-verma" target="_blank" class="contact-link">
+            <div>
+              <div class="contact-link-name">GitHub</div>
+              <div class="contact-link-handle">github.com/bablu-verma</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/babluverma" target="_blank" class="contact-link">
+            <div>
+              <div class="contact-link-name">LinkedIn</div>
+              <div class="contact-link-handle">linkedin.com/in/babluverma</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/ro.han_verma/" target="_blank" class="contact-link">
+            <div>
+              <div class="contact-link-name">Instagram</div>
+              <div class="contact-link-handle">instagram.com/ro.han_verma</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal">
+        <div class="section-label">Send A Message</div>
+        <form action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)"
+          style="margin-top:2rem;">
+          <input type="hidden" name="access_key" value="6ecb018c-6117-48cc-84a0-d72fd649aca3">
+          <div class="form-row">
+            <label class="form-label" for="name">Your Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required />
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required />
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="subject">Subject</label>
+            <input type="text" id="subject" class="form-input" name="subject" placeholder="Project Inquiry" required />
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="message">Message</label>
+            <textarea id="message" class="form-textarea" name="message" rows="4"
+              placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit"><span>Send Message →</span></button>
+          <div id="form-success"
+            style="display:none; font-family:var(--font-mono);font-size:12px;color:green;margin-top:1rem;letter-spacing:0.05em;">
+            ✓ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">© 2025 Bablu Verma. All rights reserved.</div>
+    <div class="footer-logo">BV<span>.</span>dev</div>
+    <div class="footer-right">Built with <span style="color:var(--accent)">♥</span> from Space</div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
