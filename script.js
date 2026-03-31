@@ -154,18 +154,113 @@ function initAnimations() {
     }
   });
 
-  // Terminal Sequential Reveal
-  gsap.from('#terminalGrid > div', {
-    opacity: 0,
-    x: -20,
-    stagger: 0.5,
-    duration: 0.5,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '#terminal-section',
-      start: 'top 70%'
+  // Terminal Simulation & Interaction
+  initTerminal();
+}
+
+function initTerminal() {
+  const terminal = document.querySelector('.terminal-container');
+  const history = document.getElementById('terminal-history');
+  const realInput = document.getElementById('terminal-real-input');
+  const displayInput = document.getElementById('terminal-input-display');
+  
+  if (!terminal || !realInput) return;
+
+  const sections = {
+    'about': '#about',
+    'services': '#services',
+    'projects': '#projects',
+    'gallery': '#gallery',
+    'experience': '#experience',
+    'education': '#education',
+    'testimonials': '#testimonials',
+    'faq': '#faq',
+    'contact': '#contact',
+    'home': '#hero'
+  };
+
+  const commands = {
+    'help': () => {
+      let menu = '<div class="terminal-output">Available commands: <br>';
+      menu += Object.keys(sections).map(s => `- <span style="color:var(--accent); cursor:pointer;" onclick="scrollToSection('${sections[s]}')">${s}</span>`).join('<br>');
+      menu += '<br>- clear (Clear terminal)</div>';
+      return menu;
+    },
+    'clear': () => {
+      history.innerHTML = '';
+      return '';
+    },
+    'whoami': () => '<div class="terminal-output">Bablu Verma — Full Stack Developer & App Expert</div>',
+    'ls': () => '<div class="terminal-output">about.doc  projects.exe  gallery.zip  contact.sh</div>'
+  };
+
+  // Scroll to section helper
+  window.scrollToSection = (selector) => {
+    const target = document.querySelector(selector);
+    if (target) {
+      window.scrollTo({ top: target.offsetTop - 72, behavior: 'smooth' });
+    }
+  };
+
+  // Handle typing inside terminal
+  terminal.addEventListener('click', () => realInput.focus());
+
+  realInput.addEventListener('input', () => {
+    displayInput.textContent = realInput.value;
+  });
+
+  const performCommand = (cmdStr) => {
+    const val = cmdStr.toLowerCase().trim();
+    const line = document.createElement('div');
+    line.className = 'terminal-line';
+    line.innerHTML = `<span class="t-prompt">$</span> ${cmdStr}`;
+    history.appendChild(line);
+    
+    if (commands[val]) {
+      const output = commands[val]();
+      if (output) {
+        const outLine = document.createElement('div');
+        outLine.innerHTML = output;
+        history.appendChild(outLine);
+      }
+    } else if (sections[val]) {
+      scrollToSection(sections[val]);
+      const outLine = document.createElement('div');
+      outLine.className = 'terminal-output';
+      outLine.textContent = `Redirecting to ${val}...`;
+      history.appendChild(outLine);
+    } else if (val !== '') {
+      const err = document.createElement('div');
+      err.className = 'terminal-output';
+      err.style.color = '#ff5f56';
+      err.textContent = `Command not found: ${val}. Type 'help' for options.`;
+      history.appendChild(err);
+    }
+
+    realInput.value = '';
+    displayInput.textContent = '';
+    
+    // Auto-scroll terminal to bottom
+    setTimeout(() => {
+      const body = document.getElementById('terminalGrid');
+      body.scrollTop = body.scrollHeight;
+    }, 10);
+  };
+
+  realInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      performCommand(realInput.value);
     }
   });
+
+  // Highlight help command initially
+  setTimeout(() => {
+    const hint = document.createElement('div');
+    hint.className = 'terminal-output';
+    hint.style.opacity = "0.4";
+    hint.innerHTML = '<i>[Type "help" to explore sections]</i>';
+    history.appendChild(hint);
+  }, 1000);
 }
 
 // ── GALLERY FILTER ────────────────────────────

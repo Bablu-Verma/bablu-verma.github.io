@@ -22,7 +22,6 @@
 
 I'm a passionate Software Engineer with over **3 years of experience** in turning digital ideas into reality. My focus is on creating high-performance web and mobile applications that solve real-world problems. Whether it's a complex e-commerce platform or a sleek mobile app, I ensure top-notch quality and user experience.
 
-- 🔭 **Currently working on:** [Bachat Jar](https://bachatjar.com/)
 - 🌱 **Learning:** AWS (Amazon Web Services) & Advanced System Design
 - 👯 **Collaborating on:** Open source projects & Scalable Architectures
 - 💬 **Ask me about:** React, React Native, Node.js, and API Design
@@ -77,7 +76,7 @@ I follow a systematic 5-step approach to ensure successful project delivery:
 
 I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
 
-- **Email:** [jbabluverma@gmail.com](mailto:jbabluverma@gmail.com)
+- **Email:** [\_\_@gmail.com](mailto:__)
 - **LinkedIn:** [babluverma](https://linkedin.com/in/babluverma)
 - **GitHub:** [bablu-verma](https://github.com/bablu-verma)
 - **Portfolio:** [bablu.dev](https://bablu-verma.github.io/)
