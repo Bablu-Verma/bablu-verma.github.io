@@ -603,7 +603,7 @@
     font-family: var(--font-display);
     font-size: clamp(52px, 8.5vw, 140px);
     font-weight: 800;
-    line-height: 0.88;
+    line-height: 1;
     letter-spacing: -0.04em;
     color: var(--charcoal);
   }
@@ -626,7 +626,7 @@
 
   .hero-desc {
     font-family: var(--font-mono);
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.8;
     color: var(--muted);
     max-width: 420px;
@@ -761,7 +761,7 @@
     }
 
     .hero-title {
-      font-size: clamp(40px, 12vw, 60px);
+      font-size: clamp(48px, 15vw, 85px);
     }
   }
 
@@ -868,16 +868,7 @@
     }
   }
 
-  /* ── ABOUT ─────────────────────────────────── */
-  #about {
-    padding: 6rem 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: start;
-    border-bottom: 1px solid var(--line);
-  }
-
+  /* ── DESIGN SYSTEM (Common Classes) ────────── */
   .section-label {
     font-family: var(--font-mono);
     font-size: 11px;
@@ -898,28 +889,67 @@
     max-width: 80px;
   }
 
-  .about-title {
+  .section-title,
+  .about-title,
+  .services-title,
+  .projects-title,
+  .gallery-title,
+  .exp-big-text,
+  .workflow-title,
+  .faq-title,
+  .testimonials-title,
+  .cta-title {
     font-family: var(--font-display);
-    font-size: clamp(32px, 4vw, 56px);
-    font-weight: 700;
+    font-size: clamp(38px, 5.5vw, 75px);
+    font-weight: 800;
     line-height: 1.05;
     letter-spacing: -0.02em;
     color: var(--charcoal);
   }
 
-  .about-title em {
+  .section-title em,
+  .about-title em,
+  .services-title em,
+  .exp-big-text em,
+  .contact-big em,
+  .cta-title em {
     font-family: var(--font-serif);
     font-weight: 300;
     font-style: italic;
+    color: var(--accent);
   }
 
-  .about-text {
+  .section-desc,
+  .about-text,
+  .services-desc,
+  .gallery-desc,
+  .workflow-desc,
+  .contact-sub,
+  .faq-answer p,
+  .terminal-subtext,
+  .hero-desc {
     font-family: var(--font-mono);
-    font-size: 14px;
-    line-height: 1.9;
+    font-size: 15px;
+    line-height: 1.8;
     color: var(--muted);
-    margin-top: 2rem;
+    max-width: 500px;
   }
+
+  /* ── ABOUT ─────────────────────────────────── */
+  #about {
+    padding: 6rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+    border-bottom: 1px solid var(--line);
+  }
+
+
+
+
+
+
 
   .about-stats {
     display: grid;
@@ -1033,29 +1063,7 @@
     align-items: end;
   }
 
-  .services-title {
-    font-family: var(--font-display);
-    font-size: clamp(36px, 5vw, 72px);
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: var(--charcoal);
-  }
 
-  .services-title em {
-    font-family: var(--font-serif);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .services-desc {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    line-height: 1.8;
-    color: var(--muted);
-    max-width: 400px;
-  }
 
   .services-grid {
     display: grid;
@@ -1187,14 +1195,7 @@
     margin-bottom: 3rem;
   }
 
-  .projects-title {
-    font-family: var(--font-display);
-    font-size: clamp(36px, 5vw, 72px);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 1;
-    color: var(--charcoal);
-  }
+
 
   .projects-count {
     font-family: var(--font-mono);
@@ -1413,20 +1414,7 @@
     align-items: end;
   }
 
-  .gallery-title {
-    font-family: var(--font-display);
-    font-size: clamp(36px, 5vw, 72px);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 1;
-  }
 
-  .gallery-desc {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    line-height: 1.9;
-    color: var(--muted);
-  }
 
   .gallery-filters {
     display: flex;
@@ -1708,15 +1696,7 @@
     position: relative;
   }
 
-  .exp-big-text {
-    font-family: var(--font-display);
-    font-size: clamp(48px, 6vw, 96px);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 1.05;
-    color: var(--charcoal);
-    margin-bottom: 3rem;
-  }
+
 
   .exp-big-text em {
     font-family: var(--font-serif);
@@ -1790,7 +1770,7 @@
 
   .contact-big {
     font-family: var(--font-display);
-    font-size: clamp(48px, 7vw, 112px);
+    font-size: clamp(48px, 5.5vw, 85px);
     font-weight: 800;
     letter-spacing: -0.04em;
     line-height: 0.95;
@@ -1798,18 +1778,12 @@
   }
 
   .contact-big em {
+    /* Inherited */
     display: block;
-    font-family: var(--font-serif);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--accent);
   }
 
   .contact-sub {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    line-height: 1.9;
-    color: var(--muted);
+    /* Inherited */
     margin-top: 2rem;
     max-width: 500px;
   }
@@ -2177,20 +2151,7 @@
     align-items: end;
   }
 
-  .workflow-title {
-    font-family: var(--font-display);
-    font-size: clamp(36px, 5vw, 72px);
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: -0.03em;
-  }
 
-  .workflow-desc {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    line-height: 1.8;
-    color: var(--muted);
-  }
 
   .workflow-steps {
     display: grid;
@@ -2261,23 +2222,9 @@
     padding-right: 2rem;
   }
 
-  .terminal-big-title {
-    font-family: var(--font-display);
-    font-size: clamp(36px, 5vw, 64px);
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-  }
 
-  .terminal-subtext {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    line-height: 1.8;
-    color: var(--muted);
-    max-width: 480px;
-  }
+
+
 
   .terminal-container {
     background: #1a1814;
@@ -2476,11 +2423,7 @@
   }
 
   .faq-title {
-    font-family: var(--font-display);
-    font-size: clamp(36px, 5vw, 64px);
-    font-weight: 800;
-    line-height: 1;
-    color: var(--charcoal);
+    /* Inherited */
     margin-top: 1rem;
   }
 
@@ -2561,7 +2504,7 @@
   .faq-answer p {
     padding-bottom: 2.5rem;
     font-family: var(--font-mono);
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.8;
     color: var(--muted);
     max-width: 700px;
@@ -2583,6 +2526,18 @@
       font-size: 18px;
       padding: 2rem 0;
     }
+
+    #terminal-section {
+      padding: 6rem 1.5rem;
+    }
+
+    #values {
+      padding: 6rem 1.5rem;
+    }
+
+    #workflow {
+      padding: 6rem 1.5rem;
+    }
   }
 
   /* ── TESTIMONIALS ───────────────────────────── */
@@ -2593,11 +2548,7 @@
   }
 
   .testimonials-title {
-    font-family: var(--font-display);
-    font-size: clamp(36px, 5vw, 64px);
-    font-weight: 800;
-    line-height: 1.1;
-    color: var(--charcoal);
+    /* Inherited */
     margin-top: 1rem;
     margin-bottom: 4rem;
   }
@@ -2752,7 +2703,7 @@
 
   .cta-title {
     font-family: var(--font-display);
-    font-size: clamp(40px, 8vw, 100px);
+    font-size: clamp(38px, 5.5vw, 85px);
     font-weight: 800;
     line-height: 0.95;
     letter-spacing: -0.04em;
@@ -2760,12 +2711,7 @@
     margin-bottom: 4rem;
   }
 
-  .cta-title em {
-    font-family: var(--font-serif);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--accent);
-  }
+
 
   .cta-btn {
     display: inline-block;
