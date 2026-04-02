@@ -264,17 +264,23 @@ function initTerminal() {
 }
 
 // ── GALLERY FILTER ────────────────────────────
+function applyFilter(filter) {
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    const show = filter === 'all' || item.dataset.cat === filter;
+    gsap.to(item, { opacity: show ? 1 : 0.2, scale: show ? 1 : 0.97, duration: 0.3 });
+  });
+}
+
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    document.querySelectorAll('.gallery-item').forEach(item => {
-      const show = filter === 'all' || item.dataset.cat === filter;
-      gsap.to(item, { opacity: show ? 1 : 0.2, scale: show ? 1 : 0.97, duration: 0.3 });
-    });
+    applyFilter(btn.dataset.filter);
   });
 });
+
+// Initialize with 'all' filter active
+applyFilter('all');
 
 
 
