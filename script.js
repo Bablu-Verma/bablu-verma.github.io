@@ -287,48 +287,28 @@ applyFilter('all');
 
 async function handleFormSubmit(e) {
   e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('.form-submit');
-  const successMsg = document.getElementById('form-success');
+
+   const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value;
+   
+     const phoneNumber = "919217205979"; // your WhatsApp number (no +)
+
+  const whatsappMessage = `Hello Bablu Verma,
   
-  // Update button state
-  const originalBtnHTML = btn.innerHTML;
-  btn.innerHTML = '<span>Sending...</span>';
-  btn.disabled = true;
+Name: ${name}
 
-  try {
-    const formData = new FormData(form);
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+Email: ${email}
+Subject: ${subject}
 
-    const result = await response.json();
+Message: ${message}`;
 
-    if (result.success) {
-      btn.innerHTML = '<span>Sent ✓</span>';
-      successMsg.textContent = '✓ Message sent! I\'ll get back to you soon.';
-      successMsg.style.display = 'block';
-      successMsg.style.color = 'green';
-      form.reset();
-    } else {
-      btn.innerHTML = '<span>Error!</span>';
-      successMsg.textContent = '❌ Something went wrong. Please try again.';
-      successMsg.style.display = 'block';
-      successMsg.style.color = 'red';
-    }
-  } catch (error) {
-    btn.innerHTML = '<span>Error!</span>';
-    console.error("Form error:", error);
-    successMsg.textContent = '❌ Failed to connect. Check your connection.';
-    successMsg.style.display = 'block';
-    successMsg.style.color = 'red';
-  } finally {
-    setTimeout(() => {
-      btn.innerHTML = originalBtnHTML;
-      btn.disabled = false;
-    }, 4000);
-  }
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+  window.open(url, "_blank");
+  
+
 }
 
 
@@ -443,4 +423,4 @@ window.slideTestimonials = (direction) => {
     });
   }
 };
-
+
